@@ -8,5 +8,5 @@ module cs1302uga.api {
     requires transitive javafx.fxml;
     requires transitive javafx.web;
     requires transitive com.google.gson;
-    exports cs1302.api;
+    opens cs1302.api;
 } // module
