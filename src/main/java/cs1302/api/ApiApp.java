@@ -12,18 +12,18 @@ import javafx.stage.Stage;
 /**
  * REPLACE WITH NON-SHOUTING DESCRIPTION OF YOUR APP.
  */
-public class OmegaApp extends Application {
+public class ApiApp extends Application {
     Stage stage;
     Scene scene;
     VBox root;
 
     /**
-     * Constructs an {@code OmegaApp} object. This default (i.e., no argument)
+     * Constructs an {@code ApiApp} object. This default (i.e., no argument)
      * constructor is executed in Step 2 of the JavaFX Application Life-Cycle.
      */
-    public OmegaApp() {
+    public ApiApp() {
         root = new VBox();
-    } // OmegaApp
+    } // ApiApp
 
     /** {@inheritDoc} */
     @Override
@@ -45,7 +45,7 @@ public class OmegaApp extends Application {
         scene = new Scene(root);
 
         // setup stage
-        stage.setTitle("OmegaApp!");
+        stage.setTitle("ApiApp!");
         stage.setScene(scene);
         stage.setOnCloseRequest(event -> Platform.exit());
         stage.sizeToScene();
@@ -53,4 +53,4 @@ public class OmegaApp extends Application {
 
     } // start
 
-} // OmegaApp
+} // ApiApp

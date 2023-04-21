@@ -3,9 +3,9 @@ package cs1302.api;
 import javafx.application.Application;
 
 /**
- * Driver for the {@code OmegaApp} class.
+ * Driver for the {@code ApiApp} class.
  */
-public class OmegaDriver {
+public class ApiDriver {
 
     /**
      * Main entry-point into the application.
@@ -13,7 +13,7 @@ public class OmegaDriver {
      */
     public static void main(String[] args) {
         try {
-            Application.launch(OmegaApp.class, args);
+            Application.launch(ApiApp.class, args);
         } catch (UnsupportedOperationException e) {
             e.printStackTrace();
             System.err.println();
@@ -33,4 +33,4 @@ public class OmegaDriver {
         } // try
     } // main
 
-} // OmegaDriver
+} // ApiDriver

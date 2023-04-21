@@ -30,7 +30,7 @@
     <exec.addResourcesToClasspath>true</exec.addResourcesToClasspath>
     <exec.cleanupDaemonThreads>false</exec.cleanupDaemonThreads>
     <!-- project settings -->
-    <exec.mainClass>cs1302uga.api/cs1302.api.OmegaDriver</exec.mainClass>
+    <exec.mainClass>cs1302uga.api/cs1302.api.ApiDriver</exec.mainClass>
     <cs1302.project.description>https://github.com/cs1302uga/${project.name}</cs1302.project.description>
     <cs1302.webwork.url>https://webwork.cs.uga.edu/~${env.USER}/${project.name}</cs1302.webwork.url>
     <cs1302.webwork.path>file:/home/myid/${env.USER}/public_html/${project.name}</cs1302.webwork.path>
