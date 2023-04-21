@@ -82,59 +82,59 @@ Project Description
 
 Your goal is to implement, from scratch, an application in Java 17 using JavaFX 17
 that incorporates a preponderance of the topics introduced in this course in a way that
-demonstrates that you have met the learning outcomes related to those topics. 
+demonstrates that you have met the learning outcomes related to those topics.
 
-   Your application must integrate two or more external RESTful JSON APIs so that your users don't need
-   to utilize multiple services themselves to get the information or content that
-   they want. Your app needs to do more than just download and display responses
-   from the external APIs, it needs to combine the responses in some meaningful
-   way.
+Your application must integrate two or more external RESTful JSON APIs so that your users don't need
+to utilize multiple services themselves to get the information or content that
+they want. Your app needs to do more than just download and display responses
+from the external APIs, it needs to combine the responses in some meaningful
+way.
 
-   - Services like the |openlib_api|_, |the_cat_api|_, |the_dog_api|_, |poke_api|_, etc.
-     provide **free access** to their RESTful JSON APIs -- a RESTful JSON API is one that
-     you can access with an HTTP client (like ``java.net.http.HttpClient``)  and parse with
-     a JSON library like Gson. For this project, you may only use RESTful JSON APIs and no
-     other kinds of APIs.
+- Services like the |openlib_api|_, |the_cat_api|_, |the_dog_api|_, |poke_api|_, etc.
+  provide **free access** to their RESTful JSON APIs -- a RESTful JSON API is one that
+  you can access with an HTTP client (like ``java.net.http.HttpClient``)  and parse with
+  a JSON library like Gson. For this project, you may only use RESTful JSON APIs and no
+  other kinds of APIs.
 
-     .. |the_dog_api| replace:: TheDogApi
-     .. _the_dog_api: https://thedogapi.com/
+  .. |the_dog_api| replace:: TheDogApi
+  .. _the_dog_api: https://thedogapi.com/
 
-     .. |the_cat_api| replace:: TheCatApi
-     .. _the_cat_api: https://thecatapi.com/
+  .. |the_cat_api| replace:: TheCatApi
+  .. _the_cat_api: https://thecatapi.com/
 
-     .. |poke_api| replace:: PokeApi
-     .. _poke_api: https://pokeapi.co/
+  .. |poke_api| replace:: PokeApi
+  .. _poke_api: https://pokeapi.co/
 
-     .. |openlib_api| replace:: Open Library Search API
-     .. _openlib_api: https://openlibrary.org/dev/docs/api/search
+  .. |openlib_api| replace:: Open Library Search API
+  .. _openlib_api: https://openlibrary.org/dev/docs/api/search
 
-   - Some of these API services do require you to register with them to gain access to
-     an "API key" -- an API key is usually just a special string that is unique to you
-     that must be incorporated into how you request the JSON response. For example,
-     suppose you have an API key for |the_dog_api|_ stored in ``API_KEY``, then you
-     might use the following URL when requesting the JSON for a list of breeds
-     (see |the_dog_api_breeds|_):
+- Some of these API services do require you to register with them to gain access to
+  an "API key" -- an API key is usually just a special string that is unique to you
+  that must be incorporated into how you request the JSON response. For example,
+  suppose you have an API key for |the_dog_api|_ stored in ``API_KEY``, then you
+  might use the following URL when requesting the JSON for a list of breeds
+  (see |the_dog_api_breeds|_):
 
-     .. code::
+  .. code::
 
-        "https://api.thedogapi.com/v1/breeds?apikey=" + API_KEY
+     "https://api.thedogapi.com/v1/breeds?apikey=" + API_KEY
 
-     .. |the_dog_api_breeds| replace:: ``/breeds``
-     .. _the_dog_api_breeds: https://docs.thedogapi.com/api-reference/breeds/breeds-list
+  .. |the_dog_api_breeds| replace:: ``/breeds``
+  .. _the_dog_api_breeds: https://docs.thedogapi.com/api-reference/breeds/breeds-list
 
-   - If you choose this app category, then you should read the "|working_with_apis|_"
-     appendix section before you write any code.
+- You should read the "|working_with_apis|_" appendix section before you write any code.
 
-Now that you have chosen an app category from the list above, you still have a lot of
-flexibility with regard to the functionality and visuals of your app. So long as your
-app actually functions and you meet the other requirements, you are free to make the
-app look and feel however you want (keep it appropriate).
+You have a lot of flexibility with regard to the functionality and
+visuals of your app. So long as your app actually functions and you
+meet the other requirements, you are free to make the app look and
+feel however you want (keep it appropriate).
 
-Remember, part of software development is being given a goal but not necessarily being
-given instruction on all of the details needed to accomplish that goal. For example, even
-though working with things like keyboard events, mouse events, or API keys have not
-been explicitly covered in class, you are going to need to look up how to
-do these things in order to complete this project.
+Remember, part of software development is being given a goal but not
+necessarily being given instruction on all of the details needed to
+accomplish that goal. For example, even though working with things
+like API keys have not been explicitly covered in class, you are going
+to need to look up how to do these things in order to complete this
+project.
 
 Learning Outcomes
 *****************
@@ -157,48 +157,21 @@ A functional requirement is *added* to your point total if satisfied.
 This assignment is worth 100 points.
 
 Primary Functions (90 points)
-   Your app will have some general
-   requirements related to its functionality that depend on the app category
-   that you chose.
-
-   Here are the category-specific requirements:
-
-   :External API Tool:
-      For an **External API Tool**, this means that your app integrates two or
-      more external RESTful JSON APIs based on user input and combines the
-      responses in some meaningful / interesting way. Combining responses means
-      that the response from one API should be used (at least in part) to query
-      the second API. Your application must automate the process of connecting
-      two different APIs for a single purpose. Failure to meet this requirement
-      will result in a grade of 0 for this category. If you have questions about
-      whether or not your idea is sufficient, please discuss it with an instructor.
-
-   :Arcade Game:
-      For an **Arcade Game**, this means that the visuals and game
-      mechanics are easily recognizable and consistent with traditional implementations
-      of the game you chose, and that you utilized either keyboard event handlers
-      or mouse event handlers that aren't related to one or more buttons. Failure to meet
-      this requirement will result in a grade of 0 for this category. If you have questions about
-      whether or not your idea is sufficient, please discuss it with an instructor.
+   Your app must integrate two or more external RESTful JSON APIs
+   based on user input and combine the responses in some meaningful /
+   interesting way. Combining responses means that the response from
+   one API should be used (at least in part) to query the second
+   API. Your application must automate the process of connecting two
+   different APIs for a single purpose. Failure to meet this
+   requirement will result in a grade of 0 for this category. If you
+   have questions about whether or not your idea is sufficient, please
+   discuss it with an instructor.
 
 Multiple Uses per Execution (10 points)
    After the application is started,
-   your application should allow a user to perform the primary function provided
-   by the app an arbitrary number of times without requiring them to exit and
-   rerun the application. By arbitrary, we mean that there is no limit to how
-   many times the user may do this.
-
-   Here are the category-specific requirements:
-
-   :External API Tool:
-      For an **External API Tool**, this usually means that the user is
-      able to query the API(s) more than once without restarting the
-      program.
-
-   :Arcade Game:
-      For an **Arcade Game**, this usually means that when a game ends,
-      the program does not terminate; instead, the user is able to start
-      another game should they desire to do so.
+   your application should allow the user to query the API(s) an arbitrary number of
+   times without requiring them to exit and rerun the application. By arbitrary, we
+   mean that there is no limit to how many times the user may do this.
 
 Non-Functional Requirements
 ***************************
