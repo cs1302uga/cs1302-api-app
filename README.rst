@@ -97,7 +97,7 @@ connecting two different APIs for a single purpose.
   with a JSON library like Gson. For this project, you may only use RESTful JSON APIs and no
   other kinds of APIs.
   * You can find hundreds of APIs on the web. As a starting point, you may want to take a look
-    at this list: `https://github.com/public-apis/public-apis`__
+    at this list: https://github.com/public-apis/public-apis
 
 - Some of these API services do require you to register with them to gain access to
   an "API key" -- an API key is usually just a special string that is unique to you
