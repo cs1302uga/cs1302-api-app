@@ -1,12 +1,12 @@
 
 .. project information
-.. |title| replace:: Omega
-.. |slug| replace:: **cs1302-omega**
+.. |title| replace:: Api
+.. |slug| replace:: **cs1302-api**
 .. |semester| replace:: Spring 2023
 .. |version| replace:: v2023.sp
 .. |team_size| replace:: 1
-.. |banner| image:: https://github.com/cs1302uga/cs1302-omega/raw/main/resources/readme-banner.png
-   :alt: Image from page 400 of "The Palm of Alpha Tau Omega" (1880)
+.. |banner| image:: https://github.com/cs1302uga/cs1302-api/raw/main/resources/readme-banner.png
+   :alt: Image from page 400 of "The Palm of Alpha Tau Api" (1880)
 .. |compile_points| replace:: 100
 .. |style_points_each| replace:: 5
 .. |style_points_max| replace:: 20
@@ -155,12 +155,12 @@ Arcade Game
      continuously holding down a key.
 
      .. |cs1302_game_DemoGame| replace:: ``cs1302.game.DemoGame``
-     .. _cs1302_game_DemoGame: https://github.com/cs1302uga/cs1302-omega/blob/main/src/main/java/cs1302/game/DemoGame.java
+     .. _cs1302_game_DemoGame: https://github.com/cs1302uga/cs1302-api/blob/main/src/main/java/cs1302/game/DemoGame.java
      .. |cs1302_game_Game| replace:: ``cs1302.game.Game``
-     .. _cs1302_game_Game: https://github.com/cs1302uga/cs1302-omega/blob/main/src/main/java/cs1302/game/Game.java
+     .. _cs1302_game_Game: https://github.com/cs1302uga/cs1302-api/blob/main/src/main/java/cs1302/game/Game.java
 
    - You are not required to utilize |cs1302_game_Game|_; however, feel free to adapt it into
-     your abstract parent class in the ``cs1302.omega`` package. All of the things that you
+     your abstract parent class in the ``cs1302.api`` package. All of the things that you
      have learned about JavaFX still apply, but it's likely that your arcade game will have
      less buttons and more moving images.
 
@@ -212,15 +212,15 @@ Primary Functions (90 points)
       that the response from one API should be used (at least in part) to query
       the second API. Your application must automate the process of connecting
       two different APIs for a single purpose. Failure to meet this requirement
-      will result in a grade of 0 for this category. If you have questions about 
+      will result in a grade of 0 for this category. If you have questions about
       whether or not your idea is sufficient, please discuss it with an instructor.
 
    :Arcade Game:
       For an **Arcade Game**, this means that the visuals and game
       mechanics are easily recognizable and consistent with traditional implementations
       of the game you chose, and that you utilized either keyboard event handlers
-      or mouse event handlers that aren't related to one or more buttons. Failure to meet 
-      this requirement will result in a grade of 0 for this category. If you have questions about 
+      or mouse event handlers that aren't related to one or more buttons. Failure to meet
+      this requirement will result in a grade of 0 for this category. If you have questions about
       whether or not your idea is sufficient, please discuss it with an instructor.
 
 Multiple Uses per Execution (10 points)
@@ -250,7 +250,7 @@ not satisfied. In order to emphasize the importance of these requirements,
 non-compliance results in the full point amount being subtracted from your
 point total. That is, they are all or nothing.
 
-Development Environment (100 points) 
+Development Environment (100 points)
   This project must *must compile and run*
   correctly on Odin using the specific version of Java that is enabled
   by the **CSCI 1302 shell profile**. For this requirement, the term
@@ -271,7 +271,7 @@ User-Friendly Experience (10 points)
    for their project. Failure to make your repository private will result in
    a 20-point penalty. If you are unsure whether your repository is private,
    ask an instructor or TA to visit the main URL of your project.
-   
+
    **Reminder:** Hosting any CSCI 1302 assignment in a public repository may
    lead to an academic honesty violation.
 
@@ -292,7 +292,7 @@ Local Assets / Resources (10 points)
 
 Code Style (|style_points_max|)
    Every ``.java`` file that you include as part of your submission for this project must
-   be in valid style as defined in the `CS1302 Code Style Guide <https://github.com/cs1302uga/cs1302-styleguide>`_. 
+   be in valid style as defined in the `CS1302 Code Style Guide <https://github.com/cs1302uga/cs1302-styleguide>`_.
    All of the individual code style guidelines listed in the style guide document are considered for
    this requirement.
 
@@ -333,7 +333,7 @@ Final Project Policies
 **********************
 
 .. |final_pols| replace:: Final Project Policies
-.. _final_pols: https://github.com/cs1302uga/cs1302-omega#final-project-policies
+.. _final_pols: https://github.com/cs1302uga/cs1302-api#final-project-policies
 
 No use of ``JsonArray``, ``JsonElement``, ``JsonObject``, and ``JsonParser``
    You may not use or mention the following classes provided by Gson:
@@ -377,7 +377,7 @@ Amended Late Work Policy
    For both logistical and policy-related reasons, the usual late work policy
    will not apply for this project, and no late submissions will be accepted after
    |deadline3|_.
-   
+
    Final submissions received after |deadline3|_ will not be graded.
 
 Non-Discrimination and Anti-Harassment Policy
@@ -423,10 +423,10 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
 
 1. If you have not done so already, you should create a
    free GitHub-hosted private Git repository for your project under
-   your GitHub account called ``cs1302-omega`` and note its SSH URL.
+   your GitHub account called ``cs1302-api`` and note its SSH URL.
    Here is an example:
 
-   .. image:: https://github.com/cs1302uga/cs1302-omega/raw/main/resources/readme-newrepo.png
+   .. image:: https://github.com/cs1302uga/cs1302-api/raw/main/resources/readme-newrepo.png
 
    Remember to note the SSH URL!
 
@@ -438,9 +438,9 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
 
    .. code::
 
-      $ git clone REPO_SSH cs1302-omega
+      $ git clone REPO_SSH cs1302-api
 
-   You should now have a directory called ``cs1302-omega`` in your present
+   You should now have a directory called ``cs1302-api`` in your present
    working directory.
 
    :NOTE:
@@ -453,16 +453,16 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
    make every effort to understand what each command is doing
    *before* you execute the command::
 
-     $ cd cs1302-omega
+     $ cd cs1302-api
      $ git branch -M main
-     $ git remote add starter https://github.com/cs1302uga/cs1302-omega.git
+     $ git remote add starter https://github.com/cs1302uga/cs1302-api.git
      $ git pull starter main
 
    If you followed these instructions correctly, then your present working
-   directory (you should still be inside ``cs1302-omega``) now contains the
+   directory (you should still be inside ``cs1302-api``) now contains the
    starter code and a ``.git`` directory.
 
-4. You should think of the ``cs1302-omega`` directory on Odin as your local
+4. You should think of the ``cs1302-api`` directory on Odin as your local
    copy of the project. As you add, stage, commit, branch, etc., those changes
    are only local to that copy of the project -- they do not automatically
    appear on the GitHub page for your repository. To send changes to GitHub,
@@ -499,7 +499,7 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
      + mvn -q -e exec:java -Dprism.order=sw
 
    By default, the project is setup to automatically run the
-   ``cs1302.omega.OmegaDriver`` class. If you wish to run another
+   ``cs1302.api.ApiDriver`` class. If you wish to run another
    driver class, then you can provide the ``-Dexec.mainClass``
    option after the script name::
 
@@ -586,7 +586,7 @@ and **update to your deadline file**:``meta/DEADLINE.md``.
 
       .. code::
 
-         $ find cs1302-omega/src/main/java -type f -name "*.java" | xargs check1302
+         $ find cs1302-api/src/main/java -type f -name "*.java" | xargs check1302
 
       :NOTE:
          If there are style guide violations, then checkout a new branch,
@@ -600,7 +600,7 @@ and **update to your deadline file**:``meta/DEADLINE.md``.
 
       .. code::
 
-         $ submit cs1302-omega csci-1302
+         $ submit cs1302-api csci-1302
 
       :NOTE:
          If you have any problems submitting your project, then please
@@ -619,21 +619,21 @@ Appendix
 .. rubric:: **Git**
 
 .. |git_feature_workflow| replace:: Git Feature Branch Workflow
-.. _git_feature_workflow: https://github.com/cs1302uga/cs1302-omega/blob/main/APPENDIX_GIT.rst
+.. _git_feature_workflow: https://github.com/cs1302uga/cs1302-api/blob/main/APPENDIX_GIT.rst
 
 * |git_feature_workflow|_
 
 .. rubric:: **RESTful JSON APIs**
 
 .. |working_with_apis| replace:: Working with RESTful JSON APIs
-.. _working_with_apis: https://github.com/cs1302uga/cs1302-omega/blob/main/APPENDIX_API.rst
+.. _working_with_apis: https://github.com/cs1302uga/cs1302-api/blob/main/APPENDIX_API.rst
 
 * |working_with_apis|_
 
 .. rubric:: **Games**
 
 .. |working_with_games| replace:: Creating Games in JavaFX
-.. _working_with_games: https://github.com/cs1302uga/cs1302-omega/blob/main/APPENDIX_GAME.rst
+.. _working_with_games: https://github.com/cs1302uga/cs1302-api/blob/main/APPENDIX_GAME.rst
 
 * |working_with_games|_
 
@@ -673,7 +673,7 @@ You may also find the |cs1302_gallery|_ a useful resource as well.
 3. **How can I generate my Javadoc using Maven?**
 
    For this project, a ``site.sh`` script is provided that will deploy
-   a Maven site, including Javadoc, to your ``~/public_html/cs1302-omega``
+   a Maven site, including Javadoc, to your ``~/public_html/cs1302-api``
    directory when executed on Odin. The script will display the URL of the
    deployed site near the end of its execution. Here is the command::
 
