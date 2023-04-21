@@ -1,6 +1,4 @@
-package cs1302.omega;
-
-//import cs1302.game.DemoGame;
+package cs1302.api;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -15,16 +13,23 @@ import javafx.stage.Stage;
  * REPLACE WITH NON-SHOUTING DESCRIPTION OF YOUR APP.
  */
 public class OmegaApp extends Application {
+    Stage stage;
+    Scene scene;
+    VBox root;
 
     /**
      * Constructs an {@code OmegaApp} object. This default (i.e., no argument)
      * constructor is executed in Step 2 of the JavaFX Application Life-Cycle.
      */
-    public OmegaApp() {}
+    public OmegaApp() {
+        root = new VBox();
+    } // OmegaApp
 
     /** {@inheritDoc} */
     @Override
     public void start(Stage stage) {
+
+        this.stage = stage;
 
         // demonstrate how to load local asset using "file:resources/"
         Image bannerImage = new Image("file:resources/readme-banner.png");
@@ -34,15 +39,10 @@ public class OmegaApp extends Application {
 
         // some labels to display information
         Label notice = new Label("Modify the starter code to suit your needs.");
-        Label instructions
-            = new Label("Move left/right with arrow keys; click rectangle to teleport.");
-
-        // demo game provided with the starter code
-        //DemoGame game = new DemoGame(640, 240);
 
         // setup scene
-        VBox root = new VBox(banner, notice, instructions);//, game);
-        Scene scene = new Scene(root);
+        root.getChildren().addAll(banner, notice);
+        scene = new Scene(root);
 
         // setup stage
         stage.setTitle("OmegaApp!");
@@ -50,9 +50,6 @@ public class OmegaApp extends Application {
         stage.setOnCloseRequest(event -> Platform.exit());
         stage.sizeToScene();
         stage.show();
-
-        // play the game
-        //game.play();
 
     } // start
 
