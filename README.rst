@@ -100,7 +100,9 @@ connecting two different APIs for a single purpose.
   You can find hundreds of APIs on the web. As a starting point, you may want to take a look
   at this list: https://github.com/public-apis/public-apis. Please note that this is a public
   resource. Not everything has been tested and not everything is safe for work. Please make sure
-  you only use APIs that are safe for work and meet the |uga_ndah|_.
+  you only use APIs that are safe for work and meet the |uga_ndah|_. You must access the APIs
+  directly. You are not allowed to use third-party services such as Rapid API (or similar) for
+  access.
 
 - Some of these API services do require you to register with them to gain access to
   an "API key" -- an API key is usually just a special string that is unique to you
@@ -181,6 +183,10 @@ Development Environment (100 points)
   by the **CSCI 1302 shell profile**. For this requirement, the term
   *compile* should be interpreted as *compile with no errors or warnings*.
 
+API Access (100 points)
+  You must directly access any APIs used in your project. You are not allowed to 
+  use third-party services such as Rapid API (or similar) for access.
+  
 User-Friendly Experience (10 points)
    The windows of your application
    should not exceed a pixel dimension of ``1280`` (width) by ``720`` (height).
