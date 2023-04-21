@@ -96,8 +96,11 @@ connecting two different APIs for a single purpose.
   one that you can access with an HTTP client (like ``java.net.http.HttpClient``) and parse 
   with a JSON library like Gson. For this project, you may only use RESTful JSON APIs and no
   other kinds of APIs.
-  * You can find hundreds of APIs on the web. As a starting point, you may want to take a look
-    at this list: https://github.com/public-apis/public-apis
+  
+  You can find hundreds of APIs on the web. As a starting point, you may want to take a look
+  at this list: https://github.com/public-apis/public-apis. Please note that this is a public
+  resource. Not everything has been tested and not everything is safe for work. Please make sure
+  you only use APIs that are safe for work and meet the |uga_ndah|_.
 
 - Some of these API services do require you to register with them to gain access to
   an "API key" -- an API key is usually just a special string that is unique to you
