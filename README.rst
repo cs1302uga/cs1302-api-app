@@ -5,7 +5,7 @@
 .. |semester| replace:: Spring 2023
 .. |version| replace:: v2023.sp
 .. |team_size| replace:: 1
-.. |banner| image:: https://github.com/cs1302uga/cs1302-api/raw/main/resources/readme-banner.png
+.. |banner| image:: https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-banner.png
    :alt: Image from page 400 of "The Palm of Alpha Tau Api" (1880)
 .. |compile_points| replace:: 100
 .. |style_points_each| replace:: 5
@@ -132,39 +132,6 @@ External API Tool
      .. _the_dog_api_breeds: https://docs.thedogapi.com/api-reference/breeds/breeds-list
 
    - If you choose this app category, then you should read the "|working_with_apis|_"
-     appendix section before you write any code.
-
-Arcade Game
-   Find a classic |arcade_game|_ that interests you and implement your own version
-   of it. The visuals and game mechanics must be easily recognizable and consistent with
-   traditional implementations of the game you chose. You are required to utilize either
-   keyboard event handlers or mouse event handlers that aren't related to one or
-   more buttons. Some examples of arcade games we have seen in the past include: Tetris,
-   Frogger, Snake, Asteroids, and many others. Other games such as Minesweeper, Connect 4,
-   Checkers, and Chess would not be considered arcade games and would not be valid options
-   for a final project. If you have a game you are thinking of implementing and are unsure
-   of whether or not it is allowed, please ask!
-
-   .. |arcade_game| replace:: arcade game
-   .. _arcade_game: https://en.wikipedia.org/wiki/Arcade_game
-
-   - We have included a simple example of a JavaFX component for a game in
-     |cs1302_game_DemoGame|_ -- it's actually used in the starter code that's provided
-     for this project. It utilizes the abstract parent class called |cs1302_game_Game|_
-     that provides some neat features like a main game loop and support for
-     continuously holding down a key.
-
-     .. |cs1302_game_DemoGame| replace:: ``cs1302.game.DemoGame``
-     .. _cs1302_game_DemoGame: https://github.com/cs1302uga/cs1302-api/blob/main/src/main/java/cs1302/game/DemoGame.java
-     .. |cs1302_game_Game| replace:: ``cs1302.game.Game``
-     .. _cs1302_game_Game: https://github.com/cs1302uga/cs1302-api/blob/main/src/main/java/cs1302/game/Game.java
-
-   - You are not required to utilize |cs1302_game_Game|_; however, feel free to adapt it into
-     your abstract parent class in the ``cs1302.api`` package. All of the things that you
-     have learned about JavaFX still apply, but it's likely that your arcade game will have
-     less buttons and more moving images.
-
-   - If you choose this app category, then you should read the "|working_with_games|_"
      appendix section before you write any code.
 
 Now that you have chosen an app category from the list above, you still have a lot of
@@ -629,13 +596,6 @@ Appendix
 .. _working_with_apis: https://github.com/cs1302uga/cs1302-api/blob/main/APPENDIX_API.rst
 
 * |working_with_apis|_
-
-.. rubric:: **Games**
-
-.. |working_with_games| replace:: Creating Games in JavaFX
-.. _working_with_games: https://github.com/cs1302uga/cs1302-api/blob/main/APPENDIX_GAME.rst
-
-* |working_with_games|_
 
 FAQ
 ***
