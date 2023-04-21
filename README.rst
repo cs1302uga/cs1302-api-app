@@ -418,27 +418,28 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
       on Piazza or see someone during office hours.
 
 5. Clean, compile, and run the starter code using the provided
-   ``compile.sh`` script::
+   ``run.sh`` script::
 
-     $ ./compile.sh
+     $ ./run.sh
 
    Here is the expected output, which also shows the related Maven
    commands, should you wish to type them out manually::
 
      + mvn -q -e clean
      + mvn -q -e compile
-     + mvn -q -e exec:java -Dprism.order=sw
+     + mvn -q -e exec:exec
 
    By default, the project is setup to automatically run the
    ``cs1302.api.ApiDriver`` class. If you wish to run another
-   driver class, then you can provide the ``-Dexec.mainClass``
-   option after the script name::
+   driver class, then you can provide the simple class name
+   of a class with a ``main`` method in the ``cs1302.api``
+   package after the script name::
 
-     $ ./compile.sh -Dexec.mainClass=cs1302.api.PropertiesExample
+     $ ./run.sh PropertiesExample
 
    Any other command-line options that you add after the
    script name will be added to the end of the ``mvn`` command
-   that executes ``exec:java``.
+   that executes ``exec:exec``.
 
 Submission Instructions
 ***********************
