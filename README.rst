@@ -393,7 +393,7 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
    your GitHub account called ``cs1302-api`` and note its SSH URL.
    Here is an example:
 
-   .. image:: https://github.com/cs1302uga/cs1302-api/raw/main/resources/readme-newrepo.png
+   .. image:: https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-newrepo.png
 
    Remember to note the SSH URL!
 
@@ -553,7 +553,7 @@ and **update to your deadline file**:``meta/DEADLINE.md``.
 
       .. code::
 
-         $ find cs1302-api/src/main/java -type f -name "*.java" | xargs check1302
+         $ find cs1302-api-app/src/main/java -type f -name "*.java" | xargs check1302
 
       :NOTE:
          If there are style guide violations, then checkout a new branch,
@@ -586,14 +586,14 @@ Appendix
 .. rubric:: **Git**
 
 .. |git_feature_workflow| replace:: Git Feature Branch Workflow
-.. _git_feature_workflow: https://github.com/cs1302uga/cs1302-api/blob/main/APPENDIX_GIT.rst
+.. _git_feature_workflow: https://github.com/cs1302uga/cs1302-api-app/blob/main/APPENDIX_GIT.rst
 
 * |git_feature_workflow|_
 
 .. rubric:: **RESTful JSON APIs**
 
 .. |working_with_apis| replace:: Working with RESTful JSON APIs
-.. _working_with_apis: https://github.com/cs1302uga/cs1302-api/blob/main/APPENDIX_API.rst
+.. _working_with_apis: https://github.com/cs1302uga/cs1302-api-app/blob/main/APPENDIX_API.rst
 
 * |working_with_apis|_
 
