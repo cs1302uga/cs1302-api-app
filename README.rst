@@ -13,14 +13,14 @@
 .. |server| replace:: Odin
 
 .. deadlines
-.. |deadline1| replace:: SAT 2023-05-06 (MAY 06) @ 12:00 PM EST
-.. |deadline2| replace:: SUN 2023-05-07 (MAY 07) @ 12:00 PM EST
-.. |deadline3| replace:: MON 2023-05-08 (MAY 08) @ 12:00 PM EST
+.. |deadline1| replace:: SAT 2023-05-06 (MAY 06) @ 1:00 PM EST
+.. |deadline2| replace:: SUN 2023-05-07 (MAY 07) @ 1:00 PM EST
+.. |deadline3| replace:: MON 2023-05-08 (MAY 08) @ 1:00 PM EST
 
 .. deadline section links
-.. _deadline1: #deadline-option-1-sat-2023-05-06-may-06--1200-pm-est
-.. _deadline2: #deadline-option-2-sun-2023-05-07-may-07--1200-pm-est
-.. _deadline3: #deadline-option-3-mon-2023-05-08-may-08--1200-pm-est
+.. _deadline1: #deadline-option-1-sat-2023-05-06-may-06--100-pm-est
+.. _deadline2: #deadline-option-2-sun-2023-05-07-may-07--100-pm-est
+.. _deadline3: #deadline-option-3-mon-2023-05-08-may-08--100-pm-est
 
 .. notices (need to manually update the urls)
 .. |team_size_notice| image:: https://img.shields.io/badge/Team%20Size-1-informational
