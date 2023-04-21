@@ -88,25 +88,16 @@ Your application must integrate two or more external RESTful JSON APIs so that y
 to utilize multiple services themselves to get the information or content that
 they want. Your app needs to do more than just download and display responses
 from the external APIs, it needs to combine the responses in some meaningful
-way.
+way. Combining responses means that the response from one API should be used 
+(at least in part) to query the second API. Your application must automate the process of 
+connecting two different APIs for a single purpose.
 
-- Services like the |openlib_api|_, |the_cat_api|_, |the_dog_api|_, |poke_api|_, etc.
-  provide **free access** to their RESTful JSON APIs -- a RESTful JSON API is one that
-  you can access with an HTTP client (like ``java.net.http.HttpClient``)  and parse with
-  a JSON library like Gson. For this project, you may only use RESTful JSON APIs and no
+- Many services provide **free access** to their RESTful JSON APIs -- a RESTful JSON API is 
+  one that you can access with an HTTP client (like ``java.net.http.HttpClient``) and parse 
+  with a JSON library like Gson. For this project, you may only use RESTful JSON APIs and no
   other kinds of APIs.
-
-  .. |the_dog_api| replace:: TheDogApi
-  .. _the_dog_api: https://thedogapi.com/
-
-  .. |the_cat_api| replace:: TheCatApi
-  .. _the_cat_api: https://thecatapi.com/
-
-  .. |poke_api| replace:: PokeApi
-  .. _poke_api: https://pokeapi.co/
-
-  .. |openlib_api| replace:: Open Library Search API
-  .. _openlib_api: https://openlibrary.org/dev/docs/api/search
+  * You can find hundreds of APIs on the web. As a starting point, you may want to take a look
+    at this list: `https://github.com/public-apis/public-apis`__
 
 - Some of these API services do require you to register with them to gain access to
   an "API key" -- an API key is usually just a special string that is unique to you
