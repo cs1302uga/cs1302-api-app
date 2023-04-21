@@ -80,20 +80,11 @@ not be announced unless they change the meaning of some requirement.
 Project Description
 *******************
 
-Your goal is to implement, from scratch, a GUI application in Java 17 using JavaFX 17
+Your goal is to implement, from scratch, an application in Java 17 using JavaFX 17
 that incorporates a preponderance of the topics introduced in this course in a way that
-demonstrates that you have met the learning outcomes related to those topics.
+demonstrates that you have met the learning outcomes related to those topics. 
 
-To get started, you must **pick one** the following app categories for this
-project:
-
-1. External API Tool; or
-2. Arcade Game.
-
-A brief description of each category is provided below.
-
-External API Tool
-   Integrate two or more external RESTful JSON APIs into your app so that your users don't need
+   Your application must integrate two or more external RESTful JSON APIs so that your users don't need
    to utilize multiple services themselves to get the information or content that
    they want. Your app needs to do more than just download and display responses
    from the external APIs, it needs to combine the responses in some meaningful
