@@ -105,7 +105,7 @@ connecting two different APIs for a single purpose.
 - Some of these API services do require you to register with them to gain access to
   an "API key" -- an API key is usually just a special string that is unique to you
   that must be incorporated into how you request the JSON response. For example,
-  suppose you have an API key for |the_dog_api|_ stored in ``API_KEY``, then you
+  suppose you have an API key for the dog api stored in ``API_KEY``, then you
   might use the following URL when requesting the JSON for a list of breeds
   (see |the_dog_api_breeds|_):
 
