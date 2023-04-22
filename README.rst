@@ -386,7 +386,7 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
 
      $ cd cs1302-api
      $ git branch -M main
-     $ git remote add starter https://github.com/cs1302uga/cs1302-api.git
+     $ git remote add starter https://github.com/cs1302uga/cs1302-api-app.git
      $ git pull starter main
 
    If you followed these instructions correctly, then your present working
