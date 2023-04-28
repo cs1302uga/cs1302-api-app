@@ -78,7 +78,7 @@ be announced on Piazza. Updates related to correcting typos will probably
 not be announced unless they change the meaning of some requirement.
 
 :2023-04-27:
-   Added the missing `meta/DEADLINE.md` file.
+   Added the missing ``meta/DEADLINE.md`` file.
 
 Project Description
 *******************
