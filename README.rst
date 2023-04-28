@@ -77,6 +77,9 @@ If any updates to this project are needed after it is released, then they will
 be announced on Piazza. Updates related to correcting typos will probably
 not be announced unless they change the meaning of some requirement.
 
+:2023-04-27:
+   Added the missing `meta/DEADLINE.md` file.
+
 Project Description
 *******************
 
@@ -88,15 +91,15 @@ Your application must integrate two or more external RESTful JSON APIs so that y
 to utilize multiple services themselves to get the information or content that
 they want. Your app needs to do more than just download and display responses
 from the external APIs, it needs to combine the responses in some meaningful
-way. Combining responses means that the response from one API should be used 
-(at least in part) to query the second API. Your application must automate the process of 
+way. Combining responses means that the response from one API should be used
+(at least in part) to query the second API. Your application must automate the process of
 connecting two different APIs for a single purpose.
 
-- Many services provide **free access** to their RESTful JSON APIs -- a RESTful JSON API is 
-  one that you can access with an HTTP client (like ``java.net.http.HttpClient``) and parse 
+- Many services provide **free access** to their RESTful JSON APIs -- a RESTful JSON API is
+  one that you can access with an HTTP client (like ``java.net.http.HttpClient``) and parse
   with a JSON library like Gson. For this project, you may only use RESTful JSON APIs and no
   other kinds of APIs.
-  
+
   You can find hundreds of APIs on the web. As a starting point, you may want to take a look
   at this list: https://github.com/public-apis/public-apis. Please note that this is a public
   resource. Not everything has been tested and not everything is safe for work. Please make sure
@@ -184,9 +187,9 @@ Development Environment (100 points)
   *compile* should be interpreted as *compile with no errors or warnings*.
 
 API Access (100 points)
-  You must directly access any APIs used in your project. You are not allowed to 
+  You must directly access any APIs used in your project. You are not allowed to
   use third-party services such as Rapid API (or similar) for access.
-  
+
 User-Friendly Experience (10 points)
    The windows of your application
    should not exceed a pixel dimension of ``1280`` (width) by ``720`` (height).
