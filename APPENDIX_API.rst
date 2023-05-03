@@ -60,7 +60,7 @@ HTTP client, and parses the string using Gson. The example does little
 to no error checking.
 
 .. |open_library_search_api| replace:: ``OpenLibrarySearchApi``
-.. _open_library_search_api: https://github.com/cs1302uga/cs1302-omega/blob/main/src/main/java/cs1302/api/OpenLibrarySearchApi.java
+.. _open_library_search_api: https://github.com/cs1302uga/cs1302-api-app/blob/main/src/main/java/cs1302/api/OpenLibrarySearchApi.java
 
 API Example: TheDogApi
 **********************
@@ -80,7 +80,7 @@ API key in ``resources/config.properties`` like this::
 
 An example of how to read the values from ``resources/config.properties``
 is provided in the starter code
-`here <https://github.com/cs1302uga/cs1302-omega/blob/main/src/main/java/cs1302/api/PropertiesExample.java>`__.
+`here <https://github.com/cs1302uga/cs1302-api-app/blob/main/src/main/java/cs1302/api/PropertiesExample.java>`__.
 We will assume that your code retrieves your API key and stores it in a string
 using some code similar to this:
 
