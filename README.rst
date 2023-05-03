@@ -600,12 +600,9 @@ You may also find the |cs1302_gallery|_ a useful resource as well.
 
 3. **How can I generate my Javadoc using Maven?**
 
-   For this project, a ``site.sh`` script is provided that will deploy
-   a Maven site, including Javadoc, to your ``~/public_html/cs1302-api``
-   directory when executed on Odin. The script will display the URL of the
-   deployed site near the end of its execution. Here is the command::
-
-     $ ./site.sh
+   Use ``mvn javadoc:javadoc`` to generate the website files in ``target/site/apidocs``, then
+   use ``ln -s`` with the appropiate arguments to host a link that location in your 
+   ``~/public_html`` directory.
 
 .. #############################################################################
 
