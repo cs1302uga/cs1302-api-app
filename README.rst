@@ -2,8 +2,8 @@
 .. project information
 .. |title| replace:: Api
 .. |slug| replace:: **cs1302-api**
-.. |semester| replace:: Spring 2023
-.. |version| replace:: v2023.sp
+.. |semester| replace:: Fall 2023
+.. |version| replace:: v2023.fa
 .. |team_size| replace:: 1
 .. |banner| image:: https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-banner.png
    :alt: Image from page 400 of "The Palm of Alpha Tau Api" (1880)
@@ -13,19 +13,19 @@
 .. |server| replace:: Odin
 
 .. deadlines
-.. |deadline1| replace:: SAT 2023-05-06 (MAY 06) @ 1:00 PM EST
-.. |deadline2| replace:: SUN 2023-05-07 (MAY 07) @ 1:00 PM EST
-.. |deadline3| replace:: MON 2023-05-08 (MAY 08) @ 1:00 PM EST
+.. |deadline1| replace:: MON 2023-12-11 (DEC 11) @ 1:00 PM EST
+.. |deadline2| replace:: TUE 2023-12-12 (DEC 12) @ 1:00 PM EST
+.. |deadline3| replace:: WED 2023-12-13 (DEC 13) @ 1:00 PM EST
 
 .. deadline section links
-.. _deadline1: #deadline-option-1-sat-2023-05-06-may-06--100-pm-est
-.. _deadline2: #deadline-option-2-sun-2023-05-07-may-07--100-pm-est
-.. _deadline3: #deadline-option-3-mon-2023-05-08-may-08--100-pm-est
+.. _deadline1: #deadline-option-1-mon-2023-12-11-dec-11--100-pm-est
+.. _deadline2: #deadline-option-2-tue-2023-12-12-dec-12--100-pm-est
+.. _deadline3: #deadline-option-3-wed-2023-12-13-dec-13--100-pm-est
 
 .. notices (need to manually update the urls)
 .. |team_size_notice| image:: https://img.shields.io/badge/Team%20Size-1-informational
    :alt: Team Size |team_size|
-.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Spring%202023-magenta
+.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Fall%202023-green
    :alt: Approved for: |version|
 
 CSCI 1302 - |title| |version|
