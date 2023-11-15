@@ -49,7 +49,7 @@ students in the |semester| CSCI 1302 classes at the University of Georgia.
 Deadlines
 *********
 
-This project has **three deadlines options**. Students who perform their final
+This project has **three deadline options**. Students who perform their final
 submission via the submit command before the date/times listed below automatically
 receive the associated Submission-Based (SB) extra credit. The amended late penalty
 that is described in the "|final_pols|_" section does not start applying until
@@ -77,9 +77,6 @@ If any updates to this project are needed after it is released, then they will
 be announced on Piazza. Updates related to correcting typos will probably
 not be announced unless they change the meaning of some requirement.
 
-:2023-04-27:
-   Added the missing ``meta/DEADLINE.md`` file.
-
 Project Description
 *******************
 
@@ -106,6 +103,40 @@ connecting two different APIs for a single purpose.
   you only use APIs that are safe for work and meet the |uga_ndah|_. You must access the APIs
   directly. You are not allowed to use third-party services such as Rapid API (or similar) for
   access.
+
+- You **must** choose your APIs according to the following guidelines. Failure to do so may have a negative impact on your project grade:
+
+   1. **You are required to integrate two or more RESTful JSON APIs in your final project submission.** 
+      
+      For each API, you need to be able to answer **yes** to the following questions -- they are all questions that can be self-determined based on the project description, its appendices, the related readings, and what you learned in class:
+
+      * Does the API method that you are trying to call have a URI associated with it that can be adjusted (e.g., by changing parts of the URI or by setting an HTTP header) to make a request?
+
+      * Does the API method that you are trying to call return a JSON-formatted response?
+
+   2. **Your app must integrate the two APIs in a meaningful way.** 
+
+      For each API, you need to be able to answer **yes** to the following questions -- they are all questions that can be self-determined based on the project description, its appendices, the related readings, and what you learned in class:
+
+      * Is user input used to adjust your first API request?
+
+      * Is some part (or all) of the JSON response to your first API request used to adjust your second API request?
+
+      * Does the response to the second API request provide you with one or more pieces of information that are NOT included in the response of your first API request?
+
+      The last question implies that both APIs must play an important role in the overall process that is automated by your app -- **it should NOT be possible to implement the functionality of your app using only one of the APIs that you specifically selected**.
+
+      **Additional Notes:** There are some additional things that you should consider that are not explicitly stated in the project description:
+
+      1. **The users of your app must not be required to provide their own credentials to any service in order for it to function (e.g., a username, password, or API key).** Your app may incorporate *your* API keys, if needed, as described in the appendix of the project description.
+
+      2. **You must access the APIs that you use directly.** This means that you must not use any service that enables indirect access to an API that you pick. Such services (e.g., Rapid API) often provide a common request / response interface to multiple APIs that are not authored by the service provider. 
+
+      3. **Clarification regarding APIs provided by [API Ninja](https://api-ninjas.com/api):** The instructors recognize that the APIs accessible via the API Ninjas service are authored by API Ninjas themselves. Students may use an API from API Ninjas as one of their APIs so long as their use of that API meets the other project requirements -- if more than one API from API Ninjas is used, then only one of them can count. **We may have told some students via Piazza that API Ninjas was not viable, and we apologize for that.** We will do our best to update our replies to any relevant Piazza posts about this.
+
+   3. **You are responsible for dealing with rate limits imposed by the APIs that you use.** Many APIs have a limit on the number of API calls that can be made by an app (.e.g, number of calls per second, per day, total). Please take precautions when using such APIs in your project so that we can grade it. There is no way for us to specify the exact number of times that we will run your app when grading it; however, we can say that will run your app a few times between the project deadline (MON 5/8) and when course grades are due (MON 5/15). If your app exceeds any rate limits during this period, then we will be unable to grade it.
+
+      **SUGGESTION:** To reduce the risk that will exceed a rate limit, you are encouraged to write code to let your app keep track of the number of API requests that it has made over different periods of time and use that information to programatically delay subsequent calls. For example, if your app includes a button that triggers multiple API requests, then should consider disabling the button while those requests are being made AND for some sensible extra amount of time after the completion of those requests in order to reduce the rate of request made by your app -- the exact amount of extra time will depend on the number of API requests your app makes as well as the rate limits imposed by the APIs. If your app needs to make more calls than it is allowed to make due to an APIs rate limit, then you may be able to introduce delays between requests to lower your app's request rate. Any extra waiting or intentional delays introduced by your app to deal with rate limits must be communicated to the user (e.g., you can adjust a label to say something like "intentionally waiting to deal with rate limits" whenever your program does either of these two things).
 
 - Some of these API services do require you to register with them to gain access to
   an "API key" -- an API key is usually just a special string that is unique to you
