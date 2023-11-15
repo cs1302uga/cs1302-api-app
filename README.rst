@@ -134,9 +134,9 @@ connecting two different APIs for a single purpose.
 
       3. **Clarification regarding APIs provided by [API Ninja](https://api-ninjas.com/api):** The instructors recognize that the APIs accessible via the API Ninjas service are authored by API Ninjas themselves. Students may use an API from API Ninjas as one of their APIs so long as their use of that API meets the other project requirements -- if more than one API from API Ninjas is used, then only one of them can count. **We may have told some students via Piazza that API Ninjas was not viable, and we apologize for that.** We will do our best to update our replies to any relevant Piazza posts about this.
 
-   3. **You are responsible for dealing with rate limits imposed by the APIs that you use.** Many APIs have a limit on the number of API calls that can be made by an app (.e.g, number of calls per second, per day, total). Please take precautions when using such APIs in your project so that we can grade it. There is no way for us to specify the exact number of times that we will run your app when grading it; however, we can say that will run your app a few times between the project deadline (MON 5/8) and when course grades are due (MON 5/15). If your app exceeds any rate limits during this period, then we will be unable to grade it.
+   3. **You are responsible for dealing with rate limits imposed by the APIs that you use.** Many APIs have a limit on the number of API calls that can be made by an app (.e.g, number of calls per second, per day, or in total). Please take precautions when using such APIs in your project so that we can grade it. There is no way for us to specify the exact number of times that we will run your app when grading it. If your app exceeds any rate limits while grading, then we will be unable to evaluate it.
 
-      **SUGGESTION:** To reduce the risk that will exceed a rate limit, you are encouraged to write code to let your app keep track of the number of API requests that it has made over different periods of time and use that information to programatically delay subsequent calls. For example, if your app includes a button that triggers multiple API requests, then should consider disabling the button while those requests are being made AND for some sensible extra amount of time after the completion of those requests in order to reduce the rate of request made by your app -- the exact amount of extra time will depend on the number of API requests your app makes as well as the rate limits imposed by the APIs. If your app needs to make more calls than it is allowed to make due to an APIs rate limit, then you may be able to introduce delays between requests to lower your app's request rate. Any extra waiting or intentional delays introduced by your app to deal with rate limits must be communicated to the user (e.g., you can adjust a label to say something like "intentionally waiting to deal with rate limits" whenever your program does either of these two things).
+      **SUGGESTION:** To reduce the risk that will exceed a rate limit, you are encouraged to write code to let your app keep track of the number of API requests that it has made over different periods of time and use that information to programmatically delay subsequent calls. For example, if your app includes a button that triggers multiple API requests, then should consider disabling the button while those requests are being made AND for some sensible extra amount of time after the completion of those requests in order to reduce the rate of request made by your app -- the exact amount of extra time will depend on the number of API requests your app makes as well as the rate limits imposed by the APIs. If your app needs to make more calls than it is allowed to make due to an APIs rate limit, then you may be able to introduce delays between requests to lower your app's request rate. Any extra waiting or intentional delays introduced by your app to deal with rate limits must be communicated to the user (e.g., you can adjust a label to say something like "intentionally waiting to deal with rate limits" whenever your program does either of these two things).
 
 - Some of these API services do require you to register with them to gain access to
   an "API key" -- an API key is usually just a special string that is unique to you
@@ -212,7 +212,7 @@ non-compliance results in the full point amount being subtracted from your
 point total. That is, they are all or nothing.
 
 Development Environment (100 points)
-  This project must *must compile and run*
+  This project *must compile and run*
   correctly on Odin using the specific version of Java that is enabled
   by the **CSCI 1302 shell profile**. For this requirement, the term
   *compile* should be interpreted as *compile with no errors or warnings*.
@@ -243,7 +243,7 @@ User-Friendly Experience (10 points)
 Local Assets / Resources (10 points)
    All assets (e.g., images), except
    for assets discovered using an external API, need to be pre-downloaded and
-   placed either in the ``resources`` (not ``src/main/resouces``) or a directory
+   placed either in the ``resources`` (not ``src/main/resources``) or a directory
    under ``resources``. **This will help make your app faster.** Here are some
    examples that illustrate the relationship between the path for a resource
    and the ``file:`` URL that you need to use in your code:
@@ -268,7 +268,7 @@ Code Style (|style_points_max|)
 Attribution (10 points)
    Proper attribution should be given for **all assets**
    (e.g., art, sound, music, etc.) that you include in your project, especially assets
-   that you did not personally author. All such attributions needs to be placed in the
+   that you did not personally author. All such attributions need to be placed in the
    ``meta/ATTRIBUTION.md`` file.
 
    For each asset that you authored, please provide the following information:
@@ -311,7 +311,7 @@ No use of ``JsonArray``, ``JsonElement``, ``JsonObject``, and ``JsonParser``
    To parse a JSON-formatted string, use a ``Gson`` object's ``fromJson`` method to parse
    the string directly into instances of classes that represent the data. Classes for
    an iTunes Search response and result are provided with the starter code. Instructions
-   for parsing JSON-formatted strings using ``fromJson`` is described in the
+   for parsing JSON-formatted strings using ``fromJson``are described in the
    `JSON reading <https://github.com/cs1302uga/cs1302-tutorials/blob/master/web/json.rst>`__.
 
 No use of the ``openStream()`` method in ``URL``
@@ -324,7 +324,7 @@ Final Project == Final Exam
    for a final examination as part of the completion of a full instructional term,
    and instructors have the authority to design and administer the final examination
    for a course in whatever manner is appropriate. In CSCI 1302 this semester,
-   **the final project that described by this document will be treated as the final
+   **the final project described by this document will be treated as the final
    examination** since the grade and feedback that a student receives for this
    assignment is a summative evaluation of the entire term's work.
 
@@ -334,12 +334,12 @@ Final Project == Final Exam
       final project submission does not qualify as a grade that can be dropped.
 
 Final Submission Deadline
-   Please take care to note the date/time for final submission deadline,
+   Please take care to note the date/time for the final submission deadline,
    **Deadline 3**. In particular, the deadline time is earlier
    in the day compared to previous projects.
 
 Amended Late Work Policy
-   For both logistical and policy-related reasons, the usual late work policy
+   For both logistical and policy-related reasons, the usual late-work policy
    will not apply for this project, and no late submissions will be accepted after
    |deadline3|_.
 
@@ -354,7 +354,7 @@ Non-Discrimination and Anti-Harassment Policy
    .. _uga_ndah: https://eoo.uga.edu/policies-resources/ndah-policy/
 
 Private GitHub-hosted Git Repository
-   Each student is required to setup a private GitHub-hosted Git repository
+   Each student is required to set up a private GitHub-hosted Git repository
    for their project. **Instructions are provided later in this document.**
 
 Working on a Local Machine
@@ -384,7 +384,7 @@ How to Download the Project
 
 **Downloading the starter code for this project requires more steps compared
 to earlier projects.** These instructions assume that you have completed the steps
-in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
+in "|ssh_keys|_" to set up your public and private key pair on Odin and GitHub.
 
 1. If you have not done so already, you should create a
    free GitHub-hosted private Git repository for your project under
@@ -397,7 +397,7 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
 
    :NOTE:
       In the remaining instructions, ``REPO_SSH`` refers to the SSH URL for the
-      private repository you created on GitHib.
+      private repository you created on GitHub.
 
 2. Clone your empty private repository to your Odin account.
 
@@ -409,11 +409,11 @@ in "|ssh_keys|_" to setup your public and private key pair on Odin and GitHub.
    working directory.
 
    :NOTE:
-      If you get an authentication error, then that means that you did not setup
+      If you get an authentication error, then that means that you did not set up
       your public and private key pair on Odin and GitHub prior to following these
       instructions. Instructions for this are provided in the "|ssh_keys|_" reading.
 
-3. Setup a remote link the repository containing the starter code.
+3. Set up a remote link to the repository containing the starter code.
    A sequence of commands is provided below. You should
    make every effort to understand what each command is doing
    *before* you execute the command::
@@ -493,7 +493,7 @@ Deadline Option 2: |deadline2|
 Deadline Option 3: |deadline3|
 ==============================
 
-For this deadline, you're required to **include the your final project code**
+For this deadline, you're required to **include your final project code**
 and **update to your deadline file**:``meta/DEADLINE.md``.
 
 1. Update your project's ``meta/DEADLINE.md`` Specific instructions
@@ -612,7 +612,7 @@ You may also find the |cs1302_gallery|_ a useful resource as well.
    If you're asking about a RESTful JSON API that's not mentioned in the project
    description, then probably yes! Here are the requirements:
 
-   * the API and your use of the API does must not violate the UGA |uga_ndah|_; and
+   * the API and your use of the API must not violate the UGA |uga_ndah|_; and
    * the API must provide a JSON response based on a request to a URL that
      is pragmatically generated by your program.
 
@@ -632,7 +632,7 @@ You may also find the |cs1302_gallery|_ a useful resource as well.
 3. **How can I generate my Javadoc using Maven?**
 
    Use ``mvn javadoc:javadoc`` to generate the website files in ``target/site/apidocs``, then
-   use ``ln -s`` with the appropiate arguments to host a link that location in your 
+   use ``ln -s`` with the appropriate arguments to host a link that location in your 
    ``~/public_html`` directory.
 
 .. #############################################################################
@@ -641,7 +641,7 @@ You may also find the |cs1302_gallery|_ a useful resource as well.
 .. |reading_github_setup| replace:: Setting up your own GitHub Account
 .. _reading_github_setup: https://github.com/cs1302uga/cs1302-tutorials/blob/master/github-setup.md
 
-.. instructor github profiles
+.. instructor GitHub profiles
 .. |mepcotterell| replace:: ``mepcotterell``
 .. _mepcotterell: https://github.com/mepcotterell
 .. |bjb211| replace:: ``bjb211``
