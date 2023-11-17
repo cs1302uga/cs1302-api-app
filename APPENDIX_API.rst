@@ -145,7 +145,10 @@ particular response contains an array of objects::
   ]
 
 To use this API, model the JSON-formatted response body string using Java classes,
-get the string using an HTTP client, then parse the string using Gson.
+get the string using an HTTP client, then parse the string using Gson. Since the
+outermost object is an array of objects, you will need to use ``ClassName[].class``
+instead of ``ClassName.class`` when using GSON's ``fromJson`` method, assuming
+``ClassName`` is the name of the class used to model each object in the array.
 
 .. #############################################################################
 
