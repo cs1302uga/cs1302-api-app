@@ -1,3 +1,6 @@
+.. |openlib_api| replace:: The Open Library API
+.. _openlib_api: https://openlibrary.org/
+
 .. |the_dog_api| replace:: TheDogApi
 .. _the_dog_api: https://thedogapi.com/
 
