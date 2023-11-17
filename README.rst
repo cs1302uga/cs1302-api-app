@@ -373,9 +373,9 @@ Working on a Local Machine
    currently in use on Odin (at the time of this writing) is provided below for
    convenience.
 
-   * **Apache Maven 3.8.6**
+   * **Apache Maven 3.9.5**
         https://maven.apache.org/
-   * **Java 17.0.5** (vendor: Oracle Corporation; **not OpenJDK**)
+   * **Java 17.0.8** (vendor: Oracle Corporation; **not OpenJDK**)
         https://www.oracle.com/java/technologies/downloads/
 
    All other dependencies are handled via Maven.
