@@ -1,7 +1,7 @@
 
 .. project information
 .. |title| replace:: Api
-.. |slug| replace:: **cs1302-api**
+.. |slug| replace:: **cs1302-api-app**
 .. |semester| replace:: Fall 2023
 .. |version| replace:: v2023.fa
 .. |team_size| replace:: 1
@@ -106,37 +106,37 @@ connecting two different APIs for a single purpose.
 
 - You **must** choose your APIs according to the following guidelines. Failure to do so may have a negative impact on your project grade:
 
-   1. **You are required to integrate two or more RESTful JSON APIs in your final project submission.** 
-      
-      For each API, you need to be able to answer **yes** to the following questions -- they are all questions that can be self-determined based on the project description, its appendices, the related readings, and what you learned in class:
+  1. **You are required to integrate two or more RESTful JSON APIs in your final project submission.**
 
-      * Does the API method that you are trying to call have a URI associated with it that can be adjusted (e.g., by changing parts of the URI or by setting an HTTP header) to make a request?
+     For each API, you need to be able to answer **yes** to the following questions -- they are all questions that can be self-determined based on the project description, its appendices, the related readings, and what you learned in class:
 
-      * Does the API method that you are trying to call return a JSON-formatted response?
+     * Does the API method that you are trying to call have a URI associated with it that can be adjusted (e.g., by changing parts of the URI or by setting an HTTP header) to make a request?
 
-   2. **Your app must integrate the two APIs in a meaningful way.** 
+     * Does the API method that you are trying to call return a JSON-formatted response?
 
-      For each API, you need to be able to answer **yes** to the following questions -- they are all questions that can be self-determined based on the project description, its appendices, the related readings, and what you learned in class:
+  2. **Your app must integrate the two APIs in a meaningful way.**
 
-      * Is user input used to adjust your first API request?
+     For each API, you need to be able to answer **yes** to the following questions -- they are all questions that can be self-determined based on the project description, its appendices, the related readings, and what you learned in class:
 
-      * Is some part (or all) of the JSON response to your first API request used to adjust your second API request?
+     * Is user input used to adjust your first API request?
 
-      * Does the response to the second API request provide you with one or more pieces of information that are NOT included in the response of your first API request?
+     * Is some part (or all) of the JSON response to your first API request used to adjust your second API request?
 
-      The last question implies that both APIs must play an important role in the overall process that is automated by your app -- **it should NOT be possible to implement the functionality of your app using only one of the APIs that you specifically selected**.
+     * Does the response to the second API request provide you with one or more pieces of information that are NOT included in the response of your first API request?
 
-      **Additional Notes:** There are some additional things that you should consider that are not explicitly stated in the project description:
+     The last question implies that both APIs must play an important role in the overall process that is automated by your app -- **it should NOT be possible to implement the functionality of your app using only one of the APIs that you specifically selected**.
 
-      1. **The users of your app must not be required to provide their own credentials to any service in order for it to function (e.g., a username, password, or API key).** Your app may incorporate *your* API keys, if needed, as described in the appendix of the project description.
+     **Additional Notes:** There are some additional things that you should consider that are not explicitly stated in the project description:
 
-      2. **You must access the APIs that you use directly.** This means that you must not use any service that enables indirect access to an API that you pick. Such services (e.g., Rapid API) often provide a common request / response interface to multiple APIs that are not authored by the service provider. 
+     1. **The users of your app must not be required to provide their own credentials to any service in order for it to function (e.g., a username, password, or API key).** Your app may incorporate *your* API keys, if needed, as described in the appendix of the project description.
 
-      3. **Clarification regarding APIs provided by [API Ninja](https://api-ninjas.com/api):** The instructors recognize that the APIs accessible via the API Ninjas service are authored by API Ninjas themselves. Students may use an API from API Ninjas as one of their APIs so long as their use of that API meets the other project requirements -- if more than one API from API Ninjas is used, then only one of them can count. **We may have told some students via Piazza that API Ninjas was not viable, and we apologize for that.** We will do our best to update our replies to any relevant Piazza posts about this.
+     2. **You must access the APIs that you use directly.** This means that you must not use any service that enables indirect access to an API that you pick. Such services (e.g., Rapid API) often provide a common request / response interface to multiple APIs that are not authored by the service provider.
 
-   3. **You are responsible for dealing with rate limits imposed by the APIs that you use.** Many APIs have a limit on the number of API calls that can be made by an app (.e.g, number of calls per second, per day, or in total). Please take precautions when using such APIs in your project so that we can grade it. There is no way for us to specify the exact number of times that we will run your app when grading it. If your app exceeds any rate limits while grading, then we will be unable to evaluate it.
+     3. **Clarification regarding APIs provided by [API Ninja](https://api-ninjas.com/api):** The instructors recognize that the APIs accessible via the API Ninjas service are authored by API Ninjas themselves. Students may use an API from API Ninjas as one of their APIs so long as their use of that API meets the other project requirements -- if more than one API from API Ninjas is used, then only one of them can count. **We may have told some students via Piazza that API Ninjas was not viable, and we apologize for that.** We will do our best to update our replies to any relevant Piazza posts about this.
 
-      **SUGGESTION:** To reduce the risk that will exceed a rate limit, you are encouraged to write code to let your app keep track of the number of API requests that it has made over different periods of time and use that information to programmatically delay subsequent calls. For example, if your app includes a button that triggers multiple API requests, then should consider disabling the button while those requests are being made AND for some sensible extra amount of time after the completion of those requests in order to reduce the rate of request made by your app -- the exact amount of extra time will depend on the number of API requests your app makes as well as the rate limits imposed by the APIs. If your app needs to make more calls than it is allowed to make due to an APIs rate limit, then you may be able to introduce delays between requests to lower your app's request rate. Any extra waiting or intentional delays introduced by your app to deal with rate limits must be communicated to the user (e.g., you can adjust a label to say something like "intentionally waiting to deal with rate limits" whenever your program does either of these two things).
+  3. **You are responsible for dealing with rate limits imposed by the APIs that you use.** Many APIs have a limit on the number of API calls that can be made by an app (.e.g, number of calls per second, per day, or in total). Please take precautions when using such APIs in your project so that we can grade it. There is no way for us to specify the exact number of times that we will run your app when grading it. If your app exceeds any rate limits while grading, then we will be unable to evaluate it.
+
+     **SUGGESTION:** To reduce the risk that will exceed a rate limit, you are encouraged to write code to let your app keep track of the number of API requests that it has made over different periods of time and use that information to programmatically delay subsequent calls. For example, if your app includes a button that triggers multiple API requests, then should consider disabling the button while those requests are being made AND for some sensible extra amount of time after the completion of those requests in order to reduce the rate of request made by your app -- the exact amount of extra time will depend on the number of API requests your app makes as well as the rate limits imposed by the APIs. If your app needs to make more calls than it is allowed to make due to an APIs rate limit, then you may be able to introduce delays between requests to lower your app's request rate. Any extra waiting or intentional delays introduced by your app to deal with rate limits must be communicated to the user (e.g., you can adjust a label to say something like "intentionally waiting to deal with rate limits" whenever your program does either of these two things).
 
 - Some of these API services do require you to register with them to gain access to
   an "API key" -- an API key is usually just a special string that is unique to you
@@ -308,7 +308,7 @@ No use of ``JsonArray``, ``JsonElement``, ``JsonObject``, and ``JsonParser``
    * ``com.google.gson.JsonObject``
    * ``com.google.gson.JsonParser``
 
-   To parse a JSON-formatted string, use a ``Gson`` object's ``fromJson`` method to parse
+   To parse a JSON-formatted string, use a ``Gson11 object's ``fromJson`` method to parse
    the string directly into instances of classes that represent the data. Classes for
    an iTunes Search response and result are provided with the starter code. Instructions
    for parsing JSON-formatted strings using ``fromJson``are described in the
@@ -388,7 +388,7 @@ in "|ssh_keys|_" to set up your public and private key pair on Odin and GitHub.
 
 1. If you have not done so already, you should create a
    free GitHub-hosted private Git repository for your project under
-   your GitHub account called ``cs1302-api`` and note its SSH URL.
+   your GitHub account called ``cs1302-api-app`` and note its SSH URL.
    Here is an example:
 
    .. image:: https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-newrepo.png
@@ -403,9 +403,9 @@ in "|ssh_keys|_" to set up your public and private key pair on Odin and GitHub.
 
    .. code::
 
-      $ git clone REPO_SSH cs1302-api
+      $ git clone REPO_SSH cs1302-api-app
 
-   You should now have a directory called ``cs1302-api`` in your present
+   You should now have a directory called ``cs1302-api-app`` in your present
    working directory.
 
    :NOTE:
@@ -418,16 +418,16 @@ in "|ssh_keys|_" to set up your public and private key pair on Odin and GitHub.
    make every effort to understand what each command is doing
    *before* you execute the command::
 
-     $ cd cs1302-api
+     $ cd cs1302-api-app
      $ git branch -M main
      $ git remote add starter https://github.com/cs1302uga/cs1302-api-app.git
      $ git pull starter main --rebase
 
    If you followed these instructions correctly, then your present working
-   directory (you should still be inside ``cs1302-api``) now contains the
+   directory (you should still be inside ``cs1302-api-app``) now contains the
    starter code and a ``.git`` directory.
 
-4. You should think of the ``cs1302-api`` directory on Odin as your local
+4. You should think of the ``cs1302-api-app`` directory on Odin as your local
    copy of the project. As you add, stage, commit, branch, etc., those changes
    are only local to that copy of the project -- they do not automatically
    appear on the GitHub page for your repository. To send changes to GitHub,
@@ -566,7 +566,7 @@ and **update to your deadline file**:``meta/DEADLINE.md``.
 
       .. code::
 
-         $ submit cs1302-api csci-1302
+         $ submit cs1302-api-app csci-1302
 
       :NOTE:
          If you have any problems submitting your project, then please
@@ -632,7 +632,7 @@ You may also find the |cs1302_gallery|_ a useful resource as well.
 3. **How can I generate my Javadoc using Maven?**
 
    Use ``mvn javadoc:javadoc`` to generate the website files in ``target/site/apidocs``, then
-   use ``ln -s`` with the appropriate arguments to host a link that location in your 
+   use ``ln -s`` with the appropriate arguments to host a link that location in your
    ``~/public_html`` directory.
 
 .. #############################################################################
