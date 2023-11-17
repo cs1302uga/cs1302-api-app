@@ -51,9 +51,7 @@ Deadlines
 
 This project has **three deadline options**. Students who perform their final
 submission via the submit command before the date/times listed below automatically
-receive the associated Submission-Based (SB) extra credit. The amended late penalty
-that is described in the "|final_pols|_" section does not start applying until
-after the final date and time listed.
+receive the associated Submission-Based (SB) extra credit. 
 
 =====  ===============
 Bonus  Deadline Option
