@@ -154,8 +154,8 @@ get the string using an HTTP client, then parse the string using Gson.
   method, assuming ``ClassName`` is the name of the class used to model each
   object in the array.
 
-* The variable ``life_span`` does not conform to the class style guidelines. To model
-  a response with such a variable, make use of Gson's ``@SerializedName`` annotation
+* The variable ``life_span`` does not conform to the class code style guidelines. To
+  model a response with such a variable, make use of Gson's ``@SerializedName`` annotation
   as follows::
 
     @SerializedName("life_span")
@@ -163,8 +163,44 @@ get the string using an HTTP client, then parse the string using Gson.
 
   This will tell Gson that the variable is named ``life_span`` in the JSON response
   and ``lifeSpan`` in the Java object, the latter of which conforms to the class
-  style guidelines. To use the ``@SerializedName`` annotation, import
+  code style guidelines. To use the ``@SerializedName`` annotation, import
   ``com.google.gson.annotations.SerializedName``.
+
+Example: Objects with Variable Names that Vary
+**********************************************
+
+Consider the following JSON responses::
+
+  {
+    "releases": {
+      "na": "...",
+      "eu": "..."
+    }
+  }
+
+  {
+    "releases": {
+      "jp": "...",
+      "eu": "..."
+    }
+  }
+
+Since the ``releases`` refers to an object with variable names that vary, a ``Map<K, V>``
+is needed. To model this in a class that can be used by Gson, declare ``releases``
+as a ``Map<String, String>`` variable as follows::
+
+  Map<String, String> releases;
+
+To use ``Map<K, V>``, import ``java.util.Map``. To access the data in the ``releases`` variable,
+interact with it using the methods available in the ``Map`` interface.
+
+**Additional Notes:**
+
+* In the example above, ``K`` repreents the "key" type and is replaced with ``String``. The
+  keys in this mapping are the variable names that vary (e.g., ``"na"``, ``"eu"``, ``"jp"``,
+  etc.). Likewise, ``V`` represent the "value" type and is also replaced with ``String``.
+  If the values in your response are a different type, then replace ``V`` with something
+  else.
 
 .. #############################################################################
 
