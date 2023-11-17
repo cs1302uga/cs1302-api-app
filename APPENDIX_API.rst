@@ -145,10 +145,26 @@ particular response contains an array of objects::
   ]
 
 To use this API, model the JSON-formatted response body string using Java classes,
-get the string using an HTTP client, then parse the string using Gson. Since the
-outermost object is an array of objects, you will need to use ``ClassName[].class``
-instead of ``ClassName.class`` when using GSON's ``fromJson`` method, assuming
-``ClassName`` is the name of the class used to model each object in the array.
+get the string using an HTTP client, then parse the string using Gson.
+
+**Aditional Notes:**
+
+* Since the outermost portion of the response is an array of objects, you will need to
+  use ``ClassName[].class`` instead of ``ClassName.class`` when using Gson's ``fromJson``
+  method, assuming ``ClassName`` is the name of the class used to model each
+  object in the array.
+
+* The variable ``life_span`` does not conform to the class style guidelines. To model
+  a response with such a variable, make use of Gson's ``@SerializedName`` annotation
+  as follows::
+
+    @SerializedName("life_span")
+    String lifeSpan;
+
+  This will tell Gson that the variable is named ``life_span`` in the JSON response
+  and ``lifeSpan`` in the Java object, the latter of which conforms to the class
+  style guidelines. To use the ``@SerializedName`` annotation, import
+  ``com.google.gson.annotations.SerializedName``.
 
 .. #############################################################################
 
