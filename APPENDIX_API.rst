@@ -186,7 +186,8 @@ Consider the following JSON responses::
   }
 
 Since the ``releases`` refers to an object with variable names that vary, a ``Map<K, V>``
-is needed. To model this in a class that can be used by Gson, declare ``releases``
+is needed. A ``Map<K, V>`` is a mapping from "keys" (i.e., variable names) to "values" (i.e., the
+values of the keys / variables). To model this in a class that can be used by Gson, declare ``releases``
 as a ``Map<String, String>`` variable as follows::
 
   Map<String, String> releases;
