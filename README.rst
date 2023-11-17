@@ -63,6 +63,12 @@ Bonus  Deadline Option
   +0   |deadline3|_
 =====  ===============
 
+For both logistical and policy-related reasons, the usual late-work policy
+will not apply for this project, and no late submissions will be accepted after
+|deadline3|_.
+
+Final submissions received after |deadline3|_ will not be graded.
+
 Academic Honesty
 ****************
 
