@@ -1,6 +1,6 @@
 
 .. project information
-.. |title| replace:: Api
+.. |title| replace:: Api App
 .. |slug| replace:: **cs1302-api-app**
 .. |semester| replace:: Fall 2023
 .. |version| replace:: v2023.fa
