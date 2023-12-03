@@ -126,7 +126,7 @@ connecting two different APIs for a single purpose.
 
      * Is some part (or all) of the JSON response to your first API request used to adjust your second API request?
 
-     * Does the response to the second API request provide you with one or more pieces of information that are NOT included in the response of your first API request?
+     * Does the JSON response to the second API request provide you with one or more pieces of information that are NOT included in the response of your first API request?
 
      The last question implies that both APIs must play an important role in the overall process that is automated by your app -- **it should NOT be possible to implement the functionality of your app using only one of the APIs that you specifically selected**.
 
