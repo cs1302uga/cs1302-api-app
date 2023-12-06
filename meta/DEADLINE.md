@@ -3,11 +3,11 @@
 Modify this file to satisfy a submission requirement related to the project
 deadline. Please keep this file organized using Markdown. If you click on
 this file in your GitHub repository website, then you will see that the
-Markdown is transformed into nice looking HTML.
+Markdown is transformed into nice-looking HTML.
 
 ## Part 1: App Description
 
-> Please provide a firendly description of your app, including the
+> Please provide a friendly description of your app, including
 > the primary functions available to users of the app. Be sure to
 > describe exactly what APIs you are using and how they are connected
 > in a meaningful way.
