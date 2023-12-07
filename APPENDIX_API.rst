@@ -151,7 +151,7 @@ get the string using an HTTP client, then parse the string using Gson.
 
 * Since the outermost portion of the response is an array of objects, you will need to
   use ``ClassName[].class`` instead of ``ClassName.class`` when using Gson's ``fromJson``
-  method, assuming ``ClassName`` is the name of the class used to model each
+  method. Assuming ``Breed`` is the name of the class used to model each
   object in the array::
 
     public class BreedImage {
