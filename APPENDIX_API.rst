@@ -210,7 +210,18 @@ as a ``Map<String, String>`` variable as follows::
   Map<String, String> releases;
 
 To use ``Map<K, V>``, import ``java.util.Map``. To access the data in the ``releases`` variable,
-interact with it using the methods available in the ``Map`` interface.
+interact with it using the methods available in the ``Map`` interface::
+
+  public class ExampleResponse {
+      Map<String, String> releases;
+  } // ExampleResponse
+
+  // ELSEWHERE
+  ExampleResponse obj = GSON.fromJson(responseBody, ExampleResponse.class);
+  Map<String, String> releases = obj.releases;
+  if (releases.contains("na")) {
+      // use releases.get("na") to get its value
+  } // if
 
 **Additional Notes:**
 
