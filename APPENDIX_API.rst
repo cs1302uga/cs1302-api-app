@@ -152,7 +152,24 @@ get the string using an HTTP client, then parse the string using Gson.
 * Since the outermost portion of the response is an array of objects, you will need to
   use ``ClassName[].class`` instead of ``ClassName.class`` when using Gson's ``fromJson``
   method, assuming ``ClassName`` is the name of the class used to model each
-  object in the array.
+  object in the array::
+
+    public class BreedImage {
+        ...
+        String url;
+    } // BreedImage
+
+    public class Breed {
+        ...
+        String name;
+        ...
+        String origin;
+        ...
+        BreedImage image;
+    } // Breed
+
+    // ELSEWHERE
+    Breed[] breeds = GSON.fromJson(responseBody, Breed[].class);
 
 * The variable ``life_span`` does not conform to the class code style guidelines. To
   model a response with such a variable, make use of Gson's ``@SerializedName`` annotation
