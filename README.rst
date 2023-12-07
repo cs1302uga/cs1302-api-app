@@ -81,6 +81,13 @@ If any updates to this project are needed after it is released, then they will
 be announced on Piazza. Updates related to correcting typos will probably
 not be announced unless they change the meaning of some requirement.
 
+:2023-12-07:
+    Part 1 of the `DEADLINE.md` that is required to be included in each submission
+    has been modified to have students provide sample URLs for their APIs. If you
+    have an old version of the `DEADLINE.md` file, then you need to update it prior to
+    submitting your project so that it covers the same information requested in the new
+    version. You can find the new `DEADLINE.md` file `here <https://raw.githubusercontent.com/cs1302uga/cs1302-api-app/main/meta/DEADLINE.md>`_.
+
 Project Description
 *******************
 
