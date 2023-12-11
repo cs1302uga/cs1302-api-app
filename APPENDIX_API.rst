@@ -232,15 +232,33 @@ interact with it using the methods available in the ``Map`` interface::
   else.
 
 * A ``TypeToken`` object is needed when a ``Map<K, V>`` is required to model the outer-most object
-  instead of some inner object. A ``TypeToken`` is a Gson-specific object that can help Gson remember 
-  the type information in a scenario like this – the FQN for ``TypeToken`` is ``com.google.gson.reflect.TypeToken``. 
-  A small example is provided below -- be sure to replace ``V`` with the name of class you want to use to model
+  instead of some inner object. Consider the following JSON responses::
+
+    {
+      "CSCI 1301": { ... },
+      "CSCI 1302": { ... }
+    }
+
+    {
+      "CSCI 1302": { ... },
+      "CSCI 2720": { ... }
+    }
+
+  Now suppose you have a class called `ValueType` that models the ``{ ... }`` values. You may be
+  tempted to try the following, which will NOT work::
+
+    Map<String, ValueType> map = GSON.fromJson(responseBody, Map<String, ValueType>.class);
+  
+  To get this to work, a ``TypeToken`` object is neede. A ``TypeToken`` is a Gson-specific object 
+  that can help Gson remember the type information in a scenario like this. A small example is
+  provided below -- be sure to replace ``ValueType`` with the name of class you want to use to model
   the values::
 
     TypeToken<Map<String, V>> mapType  = new TypeToken<Map<String, V>() {};  
     Map<String, V> map = GSON.fromJson(responseBody, mapType);
-  
 
+  The FQN for ``TypeToken`` is ``com.google.gson.reflect.TypeToken``.
+  
 .. #############################################################################
 
 .. copyright and license information
