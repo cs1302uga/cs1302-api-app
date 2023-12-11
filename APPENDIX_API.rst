@@ -244,7 +244,7 @@ interact with it using the methods available in the ``Map`` interface::
       "CSCI 2720": { ... }
     }
 
-  Now suppose you have a class called `ValueType` that models the ``{ ... }`` values. You may be
+  Now suppose you have a class called ``ValueType`` that models the ``{ ... }`` values. You may be
   tempted to try the following, which will NOT work::
 
     Map<String, ValueType> map = GSON.fromJson(responseBody, Map<String, ValueType>.class);
