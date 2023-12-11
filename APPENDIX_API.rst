@@ -254,8 +254,8 @@ interact with it using the methods available in the ``Map`` interface::
   provided below -- be sure to replace ``ValueType`` with the name of class you want to use to model
   the values::
 
-    TypeToken<Map<String, V>> mapType  = new TypeToken<Map<String, V>() {};  
-    Map<String, V> map = GSON.fromJson(responseBody, mapType);
+    TypeToken<Map<String, ValueType>> mapType  = new TypeToken<Map<String, ValueType>() {};  
+    Map<String, ValueType> map = GSON.fromJson(responseBody, mapType);
 
   The FQN for ``TypeToken`` is ``com.google.gson.reflect.TypeToken``.
   
