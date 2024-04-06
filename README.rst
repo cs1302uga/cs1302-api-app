@@ -583,8 +583,8 @@ Appendix
 .. rubric:: **JavaFX**
 
 * `JavaFX 17 API Documentation <https://openjfx.io/javadoc/17/>`__
-* `CSCI 1302 JavaFX Bookmarks <https://github.com/cs1302uga/cs1302-tutorials/blob/master/javafx/javafx-bookmarks.md>`__
-* `CSCI 1302 JavaFX Tutorial <https://github.com/cs1302uga/cs1302-tutorials/blob/master/javafx/javafx.md>`__
+* `CSCI 1302 JavaFX Bookmarks <https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/javafx/javafx-bookmarks.md>`__
+* `CSCI 1302 JavaFX Tutorial <https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/javafx/javafx.md>`__
 
 .. rubric:: **Git**
 
