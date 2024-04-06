@@ -140,12 +140,12 @@ connecting two different APIs for a single purpose.
 
   3. **You are responsible for dealing with rate limits imposed by the APIs that you use.** Many APIs have a limit on the number of API calls that can be made by an app (.e.g, number of calls per second, per day, or in total). Please take precautions when using such APIs in your project so that we can grade it. There is no way for us to specify the exact number of times that we will run your app when grading it. If your app exceeds any rate limits while grading, then we will be unable to evaluate it.
 
-     **SUGGESTION:** To reduce the risk that will exceed a rate limit, you are encouraged to write code to let your app keep track of the number of API requests that it has made over different periods of time and use that information to programmatically delay subsequent calls. For example, if your app includes a button that triggers multiple API requests, then should consider disabling the button while those requests are being made AND for some sensible extra amount of time after the completion of those requests in order to reduce the rate of request made by your app -- the exact amount of extra time will depend on the number of API requests your app makes as well as the rate limits imposed by the APIs. If your app needs to make more calls than it is allowed to make due to an APIs rate limit, then you may be able to introduce delays between requests to lower your app's request rate. Any extra waiting or intentional delays introduced by your app to deal with rate limits must be communicated to the user (e.g., you can adjust a label to say something like "intentionally waiting to deal with rate limits" whenever your program does either of these two things).
+     **SUGGESTION:** To reduce the risk that you will exceed a rate limit, you are encouraged to write code to let your app keep track of the number of API requests that it has made over different periods of time and use that information to programmatically delay subsequent calls. For example, if your app includes a button that triggers multiple API requests, then should consider disabling the button while those requests are being made AND for some sensible extra amount of time after the completion of those requests in order to reduce the rate of request made by your app -- the exact amount of extra time will depend on the number of API requests your app makes as well as the rate limits imposed by the APIs. If your app needs to make more calls than it is allowed to make due to an API rate limit, then you may be able to introduce delays between requests to lower your app's request rate. Any extra waiting or intentional delays introduced by your app to deal with rate limits must be communicated to the user (e.g., you can adjust a label to say something like "intentionally waiting to deal with rate limits" whenever your program does either of these two things).
 
 - Some of these API services do require you to register with them to gain access to
   an "API key" -- an API key is usually just a special string that is unique to you
   that must be incorporated into how you request the JSON response. For example,
-  suppose you have an API key for the dog api stored in ``API_KEY``, then you
+  suppose you have an API key for the dog API stored in ``API_KEY``, then you
   might use the following URL when requesting the JSON for a list of breeds
   (see |the_dog_api_breeds|_):
 
@@ -159,7 +159,7 @@ connecting two different APIs for a single purpose.
 - You should read the "|working_with_apis|_" appendix section before you write any code.
 
 You have a lot of flexibility with regard to the functionality and
-visuals of your app. So long as your app actually functions and you
+visuals of your app. So long as your app functions and you
 meet the other requirements, you are free to make the app look and
 feel however you want (keep it appropriate).
 
@@ -167,7 +167,7 @@ Remember, part of software development is being given a goal but not
 necessarily being given instruction on all of the details needed to
 accomplish that goal. For example, even though working with things
 like API keys have not been explicitly covered in class, you are going
-to need to look up how to do these things in order to complete this
+to need to look up how to do these things to complete this
 project.
 
 Learning Outcomes
@@ -175,10 +175,10 @@ Learning Outcomes
 
 Here are some of the learning outcomes for this project:
 
-* Plan, design, implement, test, debug, and deploy a complete object-oriented software solution in Linux/Unix environment (1302-LO1).
+* Plan, design, implement, test, debug, and deploy a complete object-oriented software solution in a Linux/Unix environment (1302-LO1).
 * Utilize inheritance and polymorphism in a software project (1302-LO3-LO4).
 * Develop a GUI for a software project (1302-LO7).
-* Implement exception-handling in a software project (1302-LO8).
+* Implement exception handling in a software project (1302-LO8).
 * Understand and apply language basics using an OOP language (1302-LO11).
 
 .. |freqs| replace:: Functional Requirements
@@ -211,7 +211,7 @@ Non-Functional Requirements
 ***************************
 
 A non-functional requirement is *subtracted* from your point total if
-not satisfied. In order to emphasize the importance of these requirements,
+not satisfied. To emphasize the importance of these requirements,
 non-compliance results in the full point amount being subtracted from your
 point total. That is, they are all or nothing.
 
