@@ -2,8 +2,8 @@
 .. project information
 .. |title| replace:: Api App
 .. |slug| replace:: **cs1302-api-app**
-.. |semester| replace:: Fall 2023
-.. |version| replace:: v2023.fa
+.. |semester| replace:: Spring 2024
+.. |version| replace:: v2024.sp
 .. |team_size| replace:: 1
 .. |banner| image:: https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-banner.png
    :alt: Image from page 400 of "The Palm of Alpha Tau Api" (1880)
@@ -13,19 +13,19 @@
 .. |server| replace:: Odin
 
 .. deadlines
-.. |deadline1| replace:: MON 2023-12-11 (DEC 11) @ 1:00 PM EST
-.. |deadline2| replace:: TUE 2023-12-12 (DEC 12) @ 1:00 PM EST
-.. |deadline3| replace:: WED 2023-12-13 (DEC 13) @ 1:00 PM EST
+.. |deadline1| replace:: SAT 2024-05-04 (MAY 04) @ 5:00 PM EST
+.. |deadline2| replace:: SUN 2024-05-05 (MAY 05) @ 5:00 PM EST
+.. |deadline3| replace:: MON 2024-05-06 (May 06) @ 5:00 PM EST
 
 .. deadline section links
-.. _deadline1: #deadline-option-1-mon-2023-12-11-dec-11--100-pm-est
-.. _deadline2: #deadline-option-2-tue-2023-12-12-dec-12--100-pm-est
-.. _deadline3: #deadline-option-3-wed-2023-12-13-dec-13--100-pm-est
+.. _deadline1: #deadline-option-1-sat-2024-05-04-may-04--500-pm-est
+.. _deadline2: #deadline-option-2-sun-2024-05-05-may-05--500-pm-est
+.. _deadline3: #deadline-option-3-mon-2024-05-06-may-06--500-pm-est
 
-.. notices (need to manually update the urls)
+.. notices (need to manually update the URLs)
 .. |team_size_notice| image:: https://img.shields.io/badge/Team%20Size-1-informational
    :alt: Team Size |team_size|
-.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Fall%202023-green
+.. |approval_notice| image:: https://img.shields.io/badge/Approved%20for-Spring%202024-blue
    :alt: Approved for: |version|
 
 CSCI 1302 - |title| |version|
@@ -80,13 +80,6 @@ Updates
 If any updates to this project are needed after it is released, then they will
 be announced on Piazza. Updates related to correcting typos will probably
 not be announced unless they change the meaning of some requirement.
-
-:2023-12-07:
-    Part 1 of the `DEADLINE.md` that is required to be included in each submission
-    has been modified to have students provide sample URLs for their APIs. If you
-    have an old version of the `DEADLINE.md` file, then you need to update it prior to
-    submitting your project so that it covers the same information requested in the new
-    version. You can find the new `DEADLINE.md` file `here <https://raw.githubusercontent.com/cs1302uga/cs1302-api-app/main/meta/DEADLINE.md>`_.
 
 Project Description
 *******************
