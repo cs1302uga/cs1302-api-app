@@ -19,9 +19,9 @@ Markdown is transformed into nice-looking HTML.
 
 ### Assets Authored by Others
 
-**NOTE:** If you are unable to determine the license for an asset, then
-you should list it as "Assumed proprietary: using under academic fair use."
-instead of leaving the license information blank.
+> If you are unable to determine the license for an asset, then
+> you should list it as "Assumed proprietary: using under academic fair use."
+> instead of leaving the license information blank.
 
 * Example 1 Asset Name
   - `resources/path/to/file`
