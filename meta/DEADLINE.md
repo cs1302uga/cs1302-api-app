@@ -18,9 +18,9 @@ TODO WRITE / REPLACE
 
 ## Part 1.2: APIs
 
-> For each RESTful JSON API that your app uses (at least two are required), 
+> For each RESTful JSON API that your app uses (at least two are required),
 > include an example URL for a typical request made by your app. If you
-> need to include additional notes (e.g., regarding API keys or rate 
+> need to include additional notes (e.g., regarding API keys or rate
 > limits), then you can do that below the URL/URI. Placeholders for this
 > information are provided below. If your app uses more than two RESTful
 > JSON APIs, then include them with similar formatting.
