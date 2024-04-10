@@ -67,22 +67,28 @@ process of connecting two different APIs for a single purpose.
     Gson. For this project, you may only use RESTful JSON APIs and no
     other kinds of APIs.
 
-    You can find hundreds of APIs on the web. As a starting point, you
-    may want to take a look at this list:
-    https://github.com/public-apis-dev/public-apis. Please note that this
-    is a public resource. Not everything has been tested and not
-    everything is safe for work. Please make sure you only use APIs that
-    are safe for work and adhere to the
-    *Non-Discrimination and Anti-Harassment Policy* mentioned later
-    in the project's requirements. You must access the APIs
-    directly. You are not allowed to use third-party services such as
-    Rapid API (or similar) for access.
+    You can find hundreds of APIs on the web; however, for this
+	project, you must pick your APIs from this list:
+
+    * https://github.com/public-apis-dev/public-apis
+
+	Please note that the list above is a public resource, and that
+	not every API listed has been tested by the instructional stuff
+	nor guaranteed to be safe for work. All of the APIs list should,
+	however, offer full, free access or at least a free access tier
+	and do not depend on the purchase of a device/service before a
+	request can be made.
+
+	Please make sure you only use APIs that are safe for work and
+	adhere to the *Non-Discrimination and Anti-Harassment Policy* mentioned
+	later in the project's requirements. You must access the APIs
+    directly.
 
 -   You **must** choose your APIs according to the following guidelines.
     Failure to do so may have a negative impact on your project grade:
 
-    1.  **You are required to integrate two or more RESTful JSON APIs in
-        your final project submission.**
+    1.  **You are required to integrate two or more RESTful JSON APIs
+        from the "public-apis" list above in your final project submission.**
 
         For each API, you need to be able to answer **yes** to the
         following questions -- they are all questions that can be
@@ -95,6 +101,15 @@ process of connecting two different APIs for a single purpose.
             request?
         -   Does the API method that you are trying to call return a
             JSON-formatted response?
+
+		**NOTE:** The APIs that you pick must NOT require "OAuth"
+		for authentication. It is okay if an API key is required,
+		and we even include an example that demonstrates how to
+		make a request involving an API key in the appendix. If you
+		use an API that requires an API key, then it is your responsibility
+		to make sure you familarize yourself with any restrictions
+		associated with the API key. **We also strongly encourage you
+		to NOT pick an API that requires you to pay for an API key.**
 
     2.  **Your app must integrate the two APIs in a meaningful way.**
 
@@ -172,6 +187,10 @@ process of connecting two different APIs for a single purpose.
     ```
     "https://api.thedogapi.com/v1/breeds?apikey=" + API_KEY
     ```
+
+	If the API key needs to be set using an HTTP header, then refer
+	to the example involving the GitHub API in the HTTP reading
+	posted earlier this semester.
 
 -   You should read the "Working with RESTful JSON APIs" appendix
     section before you write any code. A link to the appendix can
@@ -337,14 +356,14 @@ the string directly into an instance of a class that you created to represent th
 object described by that JSON-formatted string. Classes for an iTunes Search response
 and result are provided with the starter code. Instructions for parsing JSON-formatted
 strings using `fromJson` are described in the
-[JSON reading](https://github.com/cs1302uga/cs1302-tutorials/blob/master/web/json.rst).
+[JSON reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/web/json.md).
 
 ### No use of the `openStream()` method in `URL`
 
 You may NOT use or mention the `openStream()` method provided by the
 `java.net.URL` class. If you need to access web content, then use an
 HTTP client as described in the
-[HTTP reading](https://github.com/cs1302uga/cs1302-tutorials/blob/master/web/http.rst).
+[HTTP reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/web/http.md).
 
 ### Final Project == Final Exam
 
