@@ -8,9 +8,9 @@
 
 | Resource                            | Description                                                            |
 |-------------------------------------|------------------------------------------------------------------------|
-| Git Reference Manual\_              | alternative to the manual pages for <span class="title-ref">git</span> |
-| Pro Git\_ (book)                    | contains a lot of good examples                                        |
-| Version Control by Example\_ (book) | excellent introduction to version control by Eric Sink                 |
+| [Git Reference Manual](https://git-scm.com/docs) | alternative to the manual pages for <span class="title-ref">git</span>    |
+| [Pro Git (book)](https://git-scm.com/book/en/v2) | contains a lot of good examples                                           |
+| [Version Control by Example (book)](https://git-scm.com/book/en/v2) | excellent introduction to version control by Eric Sink |
 
 ## Introduction to the Workflow
 
@@ -22,7 +22,7 @@ what features you've added by inspecting the log, it also means the
 you to stop working on a feature if you don't think it's going to work
 out.
 
-IMPORTANT  
+IMPORTANT
 Before reading the rest of this appendix section, please refer to your
 notes from the 3.1 Git Branching - Branches in a Nutshell\_ reading in
 *Pro Git*.
@@ -40,7 +40,7 @@ work on. Give your branch a short name. In the command below, we chose
 `short-feature-name`, but you should choose something that makes more
 sense for the feature you intend to work on.
 
-``` 
+```
 $ git checkout main
 $ git checkout -b short-feature-name
 ```
@@ -60,7 +60,7 @@ We recommend that you follow the "Rule of Thumb" mentioned earlier, then
 use the following commands directly inside your `cs1302-omega`
 directory:
 
-``` 
+```
 $ git checkout main
 $ ,/prepare-merge.sh short-feature-name
 $ git merge short-feature-name
@@ -68,7 +68,7 @@ $ git pull origin main
 $ git push origin --all
 ```
 
-NOTE  
+NOTE
 The `prepare-merge.sh` script appends a timestamp to your `README.rst`
 in the `main` branch, then stages and commits that change. This ensures
 that `main` and your feature branch have divergent histories, which
