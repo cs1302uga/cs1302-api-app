@@ -17,7 +17,7 @@ Markdown is transformed into nice-looking HTML.
   - `resources/path/to/file`
   - Your Name. Year.
 
-### Authored by Others
+### Assets Authored by Others
 
 **NOTE:** If you are unable to determine the license for an asset, then
 you should list it as "Assumed proprietary: using under academic fair use."
