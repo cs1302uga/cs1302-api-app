@@ -69,7 +69,7 @@ process of connecting two different APIs for a single purpose.
 
     You can find hundreds of APIs on the web. As a starting point, you
     may want to take a look at this list:
-    <https://github.com/public-apis/public-apis>. Please note that this
+    https://github.com/public-apis-dev/public-apis. Please note that this
     is a public resource. Not everything has been tested and not
     everything is safe for work. Please make sure you only use APIs that
     are safe for work and adhere to the
