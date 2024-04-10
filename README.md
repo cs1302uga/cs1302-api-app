@@ -125,20 +125,13 @@ process of connecting two different APIs for a single purpose.
             function (e.g., a username, password, or API key).** Your
             app may incorporate *your* API keys, if needed, as described
             in the appendix of the project description.
+
         2.  **You must access the APIs that you use directly.** This
             means that you must not use any service that enables
             indirect access to an API that you pick. Such services
             (e.g., Rapid API) often provide a common request/response
             interface to multiple APIs that are not authored by the
             service provider.
-        3.  **Clarification regarding APIs provided by [API Ninja](https://api-ninjas.com/api):**
-            The instructors recognize that the APIs accessible via the API Ninjas
-            service are authored by API Ninjas themselves. Students may
-            use an API from API Ninjas as one of their APIs so long as
-            their use of that API meets the other project requirements
-            -- if more than one API from API Ninjas is used, then only
-            one of them can count. We will do our best to update our
-            replies to any relevant Piazza posts about this.
 
     3.  **You are responsible for dealing with rate limits imposed by
         the APIs that you use.** Many APIs have a limit on the number of
