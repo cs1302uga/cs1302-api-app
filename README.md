@@ -286,7 +286,8 @@ illustrate the relationship between the path for a resource and the
 | `resources/icon.png`    | `"file:resources/icon.png"`    |
 | `resources/foo/img.png` | `"file:resources/foo/img.png"` |
 
-Code Style (20)
+### Code Style (20)
+
 Every `.java` file that you include as part of your submission for this
 project must be in valid style as defined in the [CS1302 Code Style
 Guide](https://github.com/cs1302uga/cs1302-styleguide). All of the
