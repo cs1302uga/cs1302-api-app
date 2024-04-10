@@ -6,8 +6,8 @@
 
 ## Resources
 
-| Resource                            | Description                                                            |
-|-------------------------------------|------------------------------------------------------------------------|
+| Resource                            | Description                                                                            |
+|-------------------------------------|----------------------------------------------------------------------------------------|
 | [Git Reference Manual](https://git-scm.com/docs) | alternative to the manual pages for <span class="title-ref">git</span>    |
 | [Pro Git (book)](https://git-scm.com/book/en/v2) | contains a lot of good examples                                           |
 | [Version Control by Example (book)](https://git-scm.com/book/en/v2) | excellent introduction to version control by Eric Sink |
