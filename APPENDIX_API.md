@@ -1,54 +1,57 @@
 # Appendix: Working with RESTful JSON APIs
 
-<div class="contents">
-
-</div>
-
 ## API Example: Open Library Search API
 
-The The Open Library API\_ is nice because it does not require you to
-register with the API provider to get an API key -- an API key is not
-required. According to the API documentation, the endpoint is this URL:
+[The Open Library API](https://openlibrary.org/developers/api) is nice
+because it does not require you to register with the API provider to
+get an API key. According to the API documentation, the endpoint URL
+is:
 
     "https://openlibrary.org/api/search.json"
 
 Basic usage includes what looks like three mutually exclusive
 parameters, `q`, `title`, and `author`. The table below provides an
-example for each parameter as well as a link to an interactive example
-of a potential response (via Code Beautify):
+example for each parameter.
 
-| Parameter | Example Value           | Query String[1]                | Example Response |
-|-----------|-------------------------|--------------------------------|------------------|
-| `q`       | `the lord of the rings` | `?q=the+lord+of+the+rings`     | Example 1\_      |
-| `title`   | `the lord of the rings` | `?title=the+lord+of+the+rings` | Example 2\_      |
-| `author`  | `tolkien`               | `?author=tolkien`              | Example 3\_      |
+| Parameter | Example Value           | Query String[1]                |
+|-----------|-------------------------|--------------------------------|
+| `q`       | `the lord of the rings` | `?q=the+lord+of+the+rings`     |
+| `title`   | `the lord of the rings` | `?title=the+lord+of+the+rings` |
+| `author`  | `tolkien`               | `?author=tolkien`              |
+
+Remember, the `value` in `param=value` contained in a query string
+needs to be url-encoded by calling
+`URLEncoder.encode(value, StandardCharsets.UTF_8)`.
 
 The API documentation says the JSON response should look something like
 this:
 
-    {
-        "start": 0,
-        "num_found": 629,
-        "docs": [
-            {...},
-            {...},
-            {...},
-            ...
-            {...}
-        ]
-    }
+```json
+{
+    "start": 0,
+    "num_found": 629,
+    "docs": [
+        {...},
+        {...},
+        {...},
+        {...}
+    ]
+}
+```
 
-The starter code proved an example that uses this API in the
-`OpenLibrarySearchApi`\_ class -- it models the JSON-formatted response
-string using two Java classes, gets the string using an HTTP client, and
-parses the string using Gson. The example does little to no error
-checking.
+The starter code includes an example that uses this API in
+[OpenLibrarySearchApi.java](https://github.com/cs1302uga/cs1302-api-app/blob/main/src/main/java/cs1302/api/OpenLibrarySearchApi.java).
+It models the JSON-formatted response string using two Java classes,
+gets the string using an HTTP client, and parses the string using Gson.
+The example does little to no error checking.
 
 ## API Example: TheDogApi
 
-This API requires you to register with the API provider to get an API
-key -- an API key is required; see the API's Authentication\_ page for
-information on how to register for a key.
+[TheDogApi](https://thedogapi.com/) requires you to register with the
+API provider to get an API, and that API key is required in order to
+make HTTP requests to the API's endpoint URL. See the API's
+[signup page](https://thedogapi.com/signup) for information on how to
+register for a key.
 
 Once you have your API key, you will want to store it in a `.properties`
 file so that it's not hard-coded in your program. For example, you might
@@ -80,99 +83,115 @@ The table below provides an example for some of he methods; you should
 consult the API documentation for information about other potential
 methods:
 
-| Method           | Description       | Query String            | Example Response |
-|------------------|-------------------|-------------------------|------------------|
-| `/breeds`        | List the Breeds   | `?api_key=KEY`          | Example 1\_      |
-| `/breeds/search` | Search for Breeds | `?api_key=KEY&q=golden` | Example 2\_      |
+| Method           | Description       | Query String            |
+|------------------|-------------------|-------------------------|
+| `/breeds`        | List the Breeds   | `?api_key=KEY`          |
+| `/breeds/search` | Search for Breeds | `?api_key=KEY&q=golden` |
+
+Remember, the `value` in `param=value` contained in a query string
+needs to be url-encoded by calling
+`URLEncoder.encode(value, StandardCharsets.UTF_8)`.
 
 Below is an example of what the JSON response for the `/breeds` method
 looks like. Notice how the outer-most element refers to a JSON array and
 not a JSON object. This particular response contains an array of
 objects:
 
-    [
-      {...},
-      {
-        ...
-        "id": 1,
-        "name": "Affenpinscher",
-        "bred_for": "Small rodent hunting, lapdog",
-        "breed_group": "Toy",
-        "life_span": "10 - 12 years",
-        "temperament": "Stubborn, Curious, Playful, Adventurous, Active, Fun-loving",
-        "origin": "Germany, France",
-        "reference_image_id": "BJa4kxc4X",
-        "image": {
-          "id": "BJa4kxc4X",
-          "width": 1600,
-          "height": 1199,
-          "url": "https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg"
-        }
-      },
-      {...},
-      ...
-      {...},
-    ]
+```json
+[
+  {...},
+  {
+    ...
+    "id": 1,
+    "name": "Affenpinscher",
+    "bred_for": "Small rodent hunting, lapdog",
+    "breed_group": "Toy",
+    "life_span": "10 - 12 years",
+    "temperament": "Stubborn, Curious, Playful, Adventurous, Active, Fun-loving",
+    "origin": "Germany, France",
+    "reference_image_id": "BJa4kxc4X",
+    "image": {
+      "id": "BJa4kxc4X",
+      "width": 1600,
+      "height": 1199,
+      "url": "https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg"
+    }
+  },
+  {...},
+  ...
+  {...},
+]
+```
 
 To use this API, model the JSON-formatted response body string using
 Java classes, get the string using an HTTP client, then parse the string
 using Gson.
 
-**Aditional Notes:**
+### Aditional Notes
 
--   Since the outermost portion of the response is an array of objects,
-    you will need to use `ClassName[].class` instead of
-    `ClassName.class` when using Gson's `fromJson` method. Assuming
-    `Breed` is the name of the class used to model each object in the
-    array:
+Since the outermost portion of the response is an array of objects,
+you will need to use `ClassName[].class` instead of
+`ClassName.class` when using Gson's `fromJson` method. Assuming
+`Breed` is the name of the class used to model each object in the
+array:
 
-        public class BreedImage {
-            ...
-            String url;
-        } // BreedImage
+```java
+public class BreedImage {
+    ...
+    String url;
+} // BreedImage
+```
 
-        public class Breed {
-            ...
-            String name;
-            ...
-            String origin;
-            ...
-            BreedImage image;
-        } // Breed
+```java
+public class Breed {
+    ...
+    String name;
+    ...
+    String origin;
+    ...
+    BreedImage image;
+} // Breed
+```
 
-        // ELSEWHERE
-        Breed[] breeds = GSON.fromJson(responseBody, Breed[].class);
+```java
+// ELSEWHERE
+Breed[] breeds = GSON.fromJson(responseBody, Breed[].class);
+```
 
--   The variable `life_span` does not conform to the class code style
-    guidelines. To model a response with such a variable, make use of
-    Gson's `@SerializedName` annotation as follows:
+The variable `life_span` does not conform to the class code style
+guidelines. To model a response with such a variable, make use of
+Gson's `@SerializedName` annotation as follows:
 
-        @SerializedName("life_span")
-        String lifeSpan;
+```java
+@SerializedName("life_span")
+String lifeSpan;
+```
 
-    This will tell Gson that the variable is named `life_span` in the
-    JSON response and `lifeSpan` in the Java object, the latter of which
-    conforms to the class code style guidelines. To use the
-    `@SerializedName` annotation, import
-    `com.google.gson.annotations.SerializedName`.
+This will tell Gson that the variable is named `life_span` in the
+JSON response and `lifeSpan` in the Java object, the latter of which
+conforms to the class code style guidelines. To use the
+`@SerializedName` annotation, import
+`com.google.gson.annotations.SerializedName`.
 
 ## Example: Objects with Variable Names that Vary
 
 Consider the following JSON responses:
 
-    {
-      "releases": {
-        "na": "...",
-        "eu": "..."
-      }
-    }
+```json
+{
+  "releases": {
+    "na": "...",
+    "eu": "..."
+  }
+}
 
-    {
-      "releases": {
-        "jp": "...",
-        "eu": "..."
-      }
-    }
+{
+  "releases": {
+    "jp": "...",
+    "eu": "..."
+  }
+}
+```
 
 Since the `releases` refers to an object with variable names that vary,
 a `Map<K, V>` is needed. A `Map<K, V>` is a mapping from "keys" (i.e.,
@@ -180,64 +199,76 @@ variable names) to "values" (i.e., the values of the keys / variables).
 To model this in a class that can be used by Gson, declare `releases` as
 a `Map<String, String>` variable as follows:
 
-    Map<String, String> releases;
+```java
+Map<String, String> releases;
+```
 
 To use `Map<K, V>`, import `java.util.Map`. To access the data in the
 `releases` variable, interact with it using the methods available in the
 `Map` interface:
 
-    public class ExampleResponse {
-        Map<String, String> releases;
-    } // ExampleResponse
+```java
+public class ExampleResponse {
+    Map<String, String> releases;
+} // ExampleResponse
+```
 
-    // ELSEWHERE
-    ExampleResponse obj = GSON.fromJson(responseBody, ExampleResponse.class);
-    Map<String, String> releases = obj.releases;
-    if (releases.contains("na")) {
-        // use releases.get("na") to get its value
-    } // if
+```java
+// ELSEWHERE
+ExampleResponse obj = GSON.fromJson(responseBody, ExampleResponse.class);
+Map<String, String> releases = obj.releases;
+if (releases.contains("na")) {
+    // use releases.get("na") to get its value
+} // if
+```
 
-**Additional Notes:**
+### Additional Notes
 
--   In the example above, `K` repreents the "key" type and is replaced
-    with `String`. The keys in this mapping are the variable names that
-    vary (e.g., `"na"`, `"eu"`, `"jp"`, etc.). Likewise, `V` represent
-    the "value" type and is also replaced with `String`. If the values
-    in your response are a different type, then replace `V` with
-    something else.
+In the example above, `K` repreents the "key" type and is replaced
+with `String`. The keys in this mapping are the variable names that
+vary (e.g., `"na"`, `"eu"`, `"jp"`, etc.). Likewise, `V` represent
+the "value" type and is also replaced with `String`. If the values
+in your response are a different type, then replace `V` with
+something else.
 
--   A `TypeToken` object is needed when a `Map<K, V>` is required to
-    model the outer-most object instead of some inner object. Consider
-    the following JSON responses:
+A `TypeToken` object is needed when a `Map<K, V>` is required to
+model the outer-most object instead of some inner object. Consider
+the following JSON responses:
 
-        {
-          "CSCI 1301": { ... },
-          "CSCI 1302": { ... }
-        }
+```json
+{
+  "CSCI 1301": { ... },
+  "CSCI 1302": { ... }
+}
+```
 
-        {
-          "CSCI 1302": { ... },
-          "CSCI 2720": { ... }
-        }
+```json
+{
+  "CSCI 1302": { ... },
+  "CSCI 2720": { ... }
+}
+```
 
-    Now suppose you have a class called `ValueType` that models the
-    `{ ... }` values. You may be tempted to try the following, which
-    will NOT work:
+Now suppose you have a class called `ValueType` that models the
+`{ ... }` values. You may be tempted to try the following, which
+will NOT work:
 
-        Map<String, ValueType> map = GSON.fromJson(responseBody, Map<String, ValueType>.class);
+```java
+Map<String, ValueType> map = GSON.fromJson(responseBody, Map<String, ValueType>.class);
+```
 
-    To get this to work, a `TypeToken` object is neede. A `TypeToken` is
-    a Gson-specific object that can help Gson remember the type
-    information in a scenario like this. A small example is provided
-    below -- be sure to replace `ValueType` with the name of class you
-    want to use to model the values:
+To get this to work, a `TypeToken` object is neede. A `TypeToken` is
+a Gson-specific object that can help Gson remember the type
+information in a scenario like this. A small example is provided
+below -- be sure to replace `ValueType` with the name of class you
+want to use to model the values:
 
-        TypeToken<Map<String, ValueType>> mapType  = new TypeToken<Map<String, ValueType>() {};  
-        Map<String, ValueType> map = GSON.fromJson(responseBody, mapType);
+```java
+TypeToken<Map<String, ValueType>> mapType  = new TypeToken<Map<String, ValueType>() {};
+Map<String, ValueType> map = GSON.fromJson(responseBody, mapType);
+```
 
-    The FQN for `TypeToken` is `com.google.gson.reflect.TypeToken`.
-
-<div class="footer">
+The FQN for `TypeToken` is `com.google.gson.reflect.TypeToken`.
 
 [![license\_image](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
@@ -246,9 +277,3 @@ of Georgia. This work is licensed under a CC BY-NC-ND 4.0\_ license to
 students and the public. The content and opinions expressed on this Web
 page do not necessarily reflect the views of nor are they endorsed by
 the University of Georgia or the University System of Georgia.
-
-</div>
-
-[1] Remember, the `value` in `param=value` contained in a query string
-needs to be url-encoded by calling
-`URLEncoder.encode(value, StandardCharsets.UTF_8)`.
