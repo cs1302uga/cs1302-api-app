@@ -12,8 +12,8 @@ import java.util.Properties;
  * The examples assumes {@code "resources/config.properties"} looks like this:
  *
  * <pre>
- * project.year=2021
- * project.semester=Spring
+ * dogapi.key=the-dogapi-key-value
+ * catapi.key=the-catapi-key-value
  * </pre>
  *
  * <p>
@@ -35,11 +35,11 @@ public class PropertiesExample {
         try (FileInputStream configFileStream = new FileInputStream(configPath)) {
             Properties config = new Properties();
             config.load(configFileStream);
-            config.list(System.out);                                  // list all using standard out
-            String year = config.getProperty("project.year");         // get project.year
-            String semester = config.getProperty("project.semester"); // get project.semester
-            System.out.printf("year = %s\n", year);
-            System.out.printf("semester = %s\n", semester);
+            config.list(System.out);                             // list all using standard out
+            String dogApiKey = config.getProperty("dogapi.key"); // get dogapi.key
+            String catApiKey = config.getProperty("catapi.key"); // get catapi.key
+            System.out.printf("dogApiKey = \"%s\"\n", dogApiKey);
+            System.out.printf("catApiKey = \"%s\"\n", catApiKey);
         } catch (IOException ioe) {
             System.err.println(ioe);
             ioe.printStackTrace();
