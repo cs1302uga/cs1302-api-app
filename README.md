@@ -27,7 +27,7 @@ credit.
 
 For both logistical and policy-related reasons, the usual late-work
 policy will not apply for this project, and no late submissions will be
-accepted after the last deasline option mentioned above. **To be clear,
+accepted after the last deadline option mentioned above. **To be clear,
 final project submissions received after the last deadline option will
 NOT be graded.**
 
@@ -58,8 +58,8 @@ get the information or content that they want. Your app needs to do more
 than just download and display responses from the external APIs, it
 needs to combine the responses in some meaningful way. Combining
 responses means that the response from one API should be used (at least
-in part) to query the second API. Your application must automate the
-process of connecting two different APIs for a single purpose.
+in part) to query the second API (see below for more details). 
+Your application must automate the process of connecting two different APIs for a single purpose.
 
 -   Many services provide **free access** to their RESTful JSON APIs --
     a RESTful JSON API is one that you can access with an HTTP client
@@ -72,8 +72,8 @@ process of connecting two different APIs for a single purpose.
 
     * https://github.com/public-apis-dev/public-apis
 
-	Please note that the list above is a public resource, and that
-	not every API listed has been tested by the instructional stuff
+	Please note that the list above is a public resource and that
+	not every API listed has been tested by the instructional staff
 	nor guaranteed to be safe for work. All of the APIs list should,
 	however, offer full, free access or at least a free access tier
 	and do not depend on the purchase of a device/service before a
@@ -81,8 +81,7 @@ process of connecting two different APIs for a single purpose.
 
 	Please make sure you only use APIs that are safe for work and
 	adhere to the *Non-Discrimination and Anti-Harassment Policy* mentioned
-	later in the project's requirements. You must access the APIs
-    directly.
+	later in the project's requirements. 
 
 -   You **must** choose your APIs according to the following guidelines.
     Failure to do so may have a negative impact on your project grade:
@@ -103,15 +102,16 @@ process of connecting two different APIs for a single purpose.
             JSON-formatted response?
 
 		**NOTE:** The APIs that you pick must NOT require "OAuth"
-		for authentication. It is okay if an API key is required,
+		for authentication (for each API on the "public-apis" site, there is a column
+                indicating if OAuth is required). It is okay if an API key is required,
 		and we even include an example that demonstrates how to
 		make a request involving an API key in the appendix. If you
 		use an API that requires an API key, then it is your responsibility
-		to make sure you familarize yourself with any restrictions
+		to make sure you familiarize yourself with any restrictions
 		associated with the API key. **We also strongly encourage you
 		to NOT pick an API that requires you to pay for an API key.**
 
-    2.  **Your app must integrate the two APIs in a meaningful way.**
+    3.  **Your app must integrate the two APIs in a meaningful way.**
 
         For each API, you need to be able to answer **yes** to the
         following questions -- they are all questions that can be
@@ -120,10 +120,12 @@ process of connecting two different APIs for a single purpose.
 
         -   Is user input used to adjust your first API request?
         -   Is some part (or all) of the JSON response to your first API
-            request used to adjust your second API request?
+            request used to adjust your second API request? The response
+            can be modified by your application before being sent to the
+            second API.
         -   Does the JSON response to the second API request provide you
             with one or more pieces of information that are NOT included
-            in the response of your first API request?
+            in the response from your first API request?
 
         The last question implies that both APIs must play an important
         role in the overall process that is automated by your app --
@@ -141,21 +143,14 @@ process of connecting two different APIs for a single purpose.
             app may incorporate *your* API keys, if needed, as described
             in the appendix of the project description.
 
-        2.  **You must access the APIs that you use directly.** This
-            means that you must not use any service that enables
-            indirect access to an API that you pick. Such services
-            (e.g., Rapid API) often provide a common request/response
-            interface to multiple APIs that are not authored by the
-            service provider.
-
-    3.  **You are responsible for dealing with rate limits imposed by
-        the APIs that you use.** Many APIs have a limit on the number of
-        API calls that can be made by an app (.e.g, number of calls per
-        second, per day, or in total). Please take precautions when
-        using such APIs in your project so that we can grade it. There
-        is no way for us to specify the exact number of times that we
-        will run your app when grading it. If your app exceeds any rate
-        limits while grading, then we will be unable to evaluate it.
+        2.  **You are responsible for dealing with rate limits imposed by
+            the APIs that you use.** Many APIs have a limit on the number of
+            API calls that can be made by an app (e.g., number of calls per
+            second, per day, or in total). Please take precautions when
+            using such APIs in your project so that we can grade it. There
+            is no way for us to specify the exact number of times that we
+            will run your app when grading it. If your app exceeds any rate
+            limits while grading, then we will be unable to evaluate it.
 
         **SUGGESTION:** To reduce the risk that you will exceed a rate
         limit, you are encouraged to write code to let your app keep
@@ -188,9 +183,9 @@ process of connecting two different APIs for a single purpose.
     "https://api.thedogapi.com/v1/breeds?apikey=" + API_KEY
     ```
 
-	If the API key needs to be set using an HTTP header, then refer
-	to the example involving the GitHub API in the HTTP reading
-	posted earlier this semester.
+    If the API key needs to be set using an HTTP header, then refer
+    to the example involving the GitHub API in the HTTP reading
+    posted earlier this semester.
 
 -   You should read the "Working with RESTful JSON APIs" appendix
     section before you write any code. A link to the appendix can
@@ -229,7 +224,7 @@ This assignment is worth 100 points.
 ### Primary Functions (90 points)
 
 Your app must integrate two or more external RESTful JSON APIs based on
-user input and combine the responses in some meaningful / interesting
+user input and combine the responses in some meaningful/interesting
 way. Combining responses means that the response from one API should be
 used (at least in part) to query the second API. Your application must
 automate the process of connecting two different APIs for a single
