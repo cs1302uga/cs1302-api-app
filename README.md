@@ -279,6 +279,14 @@ private, ask an instructor or TA to visit the main URL of your project.
 **Reminder:** Hosting any CSCI 1302 assignment in a public repository
 may lead to an academic honesty violation.
 
+### DEADLINE.md (10 points)
+
+The included `DEADLINE.md` file must adequately describe your application,
+explain the APIs used (the URLs used to request data, and the rate limits (if any)), 
+and provide thoughtful comments on what you learned. More
+details can be found in the provided 
+[`DEADLINE.md` template](https://github.com/cs1302uga/cs1302-api-app/blob/main/meta/DEADLINE.md).
+  
 ### Local Assets / Resources (10 points)
 
 All assets (e.g., images), except for assets discovered using an
