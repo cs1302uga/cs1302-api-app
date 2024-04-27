@@ -172,6 +172,10 @@ Your application must automate the process of connecting two different APIs for 
         something like "intentionally waiting to deal with rate limits"
         whenever your program does either of these two things).
 
+        **FURTHER READING:** We have included some additional information
+        [here](APPENDIX_API.md#checking-for-rate-limits) regarding how to
+        check for rate limit values associated with an HTTP response.
+
 -   Some of these API services do require you to register with them to
     gain access to an "API key" -- an API key is usually just a special
     string that is unique to you that must be incorporated into how you
