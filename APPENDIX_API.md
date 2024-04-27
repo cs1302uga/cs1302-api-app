@@ -1,5 +1,35 @@
 # Appendix: Working with RESTful JSON APIs
 
+## Checking for Rate Limits
+
+Some RESTful JSON APIs impose limits on how often users can make API requests. Some APIs with rate limits set the status code of a response to [429 (Too Many Requests)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) when a user exceeds their rate limit and include a [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) header (or various [X-RateLimit-](https://www.ietf.org/archive/id/draft-polli-ratelimit-headers-02.html#name-header-specifications) headers) in the response to explicitly let us know how long we should wait before sending another request. 
+
+Information about an API's "rate limits" can usually be found in the documentation provided by the API developers or provider. If you are still unsure whether rate limits are imposed after consulting the API's documentation, then you can usually figure it out yourself using `curl`, a Unix command that lets you send an HTTP request in the terminal and see its associated HTTP response. For example, the following `curl` example would tell us that we need to wait at least 300 seconds (i.e., 5 minutes) before sending another request (see "`man curl`" for information about `curl`'s options):
+
+```
+$ curl -IL -X GET 'REQUEST-URI'
+```
+
+```
+HTTP/1.2 429 Too Many Requests
+Retry-After: 300
+```
+
+You can access the headers associated with an `HttpResponse<T>` obect in in your Java code by calling the object's `headers()` method. After that, you can call `getFirstValue(name)` on the `HttpHeaders` object to access the value of a specific header entry where `name` is the lowercase version of the desired header's name. Here is a simple example (without error handling) that attempts to get, parse, and use the value of the`"Retry-After"` header associated with an `HttpResponse<String>` object:
+
+```java
+Optional<String> retryAfter = response.headers()
+    .getFirstValue("retry-after"); 
+
+if (rettryAfter.isPresent()) {
+    String retryAfterValue = retryAfter.get(); // "300"
+    int seconds = Integer.parseInt(retryAfterValue); // 300
+    ...
+} // if
+```
+
+See the documentation for [the `headers()` method](https://docs.oracle.com/en/java/javase/17/docs/api/java.net.http/java/net/http/HttpResponse.html#headers())  in `HttpResponse<T>` for more information.
+
 ## API Example: Open Library Search API
 
 [The Open Library API](https://openlibrary.org/developers/api) is nice
