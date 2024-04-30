@@ -122,7 +122,10 @@ Your application must automate the process of connecting two different APIs for 
         -   Is some part (or all) of the JSON response to your first API
             request used to adjust your second API request? The response
             can be modified by your application before being sent to the
-            second API.
+            second API. The input used for the second API (i.e., the information
+            used to adjust the request) must be different from the input
+            used for the first API -- the inputs can share something in
+            common, but they cannot be the same.
         -   Does the JSON response to the second API request provide you
             with one or more pieces of information that are NOT included
             in the response from your first API request?
