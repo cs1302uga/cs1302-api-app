@@ -371,7 +371,7 @@ strings using `fromJson` are described in the
 ### No use of the `openStream()` or similar methods in `URL`
 
 You may NOT use or mention the `openStream()`, `openConnection()` and `getContent()`
-methods provided by the `java.net.URL` class nor should you use or mention `HttpURLConnection`. 
+methods provided by the `java.net.URL` class nor should you use or mention `java.net.HttpURLConnection`. 
 If you need to access web content, then use the `HttpClient`, `HttpRequest`, and `HttpResponse<T>` 
 types in the `java.net.http` package as described in the
 [HTTP reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/web/http.md). Use of
