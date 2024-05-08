@@ -368,12 +368,15 @@ and result are provided with the starter code. Instructions for parsing JSON-for
 strings using `fromJson` are described in the
 [JSON reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/web/json.md).
 
-### No use of the `openStream()` method in `URL`
+### No use of the `openStream()` or similar methods in `URL`
 
-You may NOT use or mention the `openStream()` method provided by the
-`java.net.URL` class. If you need to access web content, then use an
-HTTP client as described in the
-[HTTP reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/web/http.md).
+You may NOT use or mention the `openStream()`, `openConnection()` and `getContent()`
+methods provided by the `java.net.URL` class nor should you use or mention `HttpURLConnection`. 
+If you need to access web content, then use the `HttpClient`, `HttpRequest`, and `HttpResponse<T>` 
+types in the `java.net.http` package as described in the
+[HTTP reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/web/http.md). Use of
+other types in the `java.net.http` package is allowed if they are used to support `HttpClient`, 
+`HttpRequest`, and/or `HttpResponse<T>`.
 
 ### Final Project == Final Exam
 
