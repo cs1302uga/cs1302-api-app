@@ -1,7 +1,6 @@
-# CSCI 1302 - Api App v2024.sp
+# CSCI 1302 - Api App v2024.fa
 
-![Approved for](https://img.shields.io/badge/Approved%20for-Spring%202024-blue)
-![Team Size](https://img.shields.io/badge/Team%20Size-1-informational)
+![Approved for Fall 2024](https://img.shields.io/badge/Approved%20for-Fall%202024-green)
 
 ![Image from page 400 of "The Palm of Alpha Tau Api" (1880)](https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-banner.png)
 
