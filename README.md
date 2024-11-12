@@ -365,7 +365,7 @@ the string directly into an instance of a class that you created to represent th
 object described by that JSON-formatted string. Classes for an iTunes Search response
 and result are provided with the starter code. Instructions for parsing JSON-formatted
 strings using `fromJson` are described in the
-[JSON reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/web/json.md).
+[JSON chapter](https://cs1302uga.github.io/cs1302-book/java/json/json-index.html).
 
 ### No use of the `openStream()` or similar methods in `URL`
 
@@ -373,7 +373,7 @@ You may NOT use or mention the `openStream()`, `openConnection()` and `getConten
 methods provided by the `java.net.URL` class nor should you use or mention `java.net.HttpURLConnection`. 
 If you need to access web content, then use the `HttpClient`, `HttpRequest`, and `HttpResponse<T>` 
 types in the `java.net.http` package as described in the
-[HTTP reading](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/web/http.md). Use of
+[HTTP chapter](https://cs1302uga.github.io/cs1302-book/java/http/http-index.html). Use of
 other types in the `java.net.http` package is allowed if they are used to support `HttpClient`, 
 `HttpRequest`, and/or `HttpResponse<T>`.
 
@@ -624,8 +624,8 @@ files are on `odin.cs.uga.edu`.
 ### JavaFX
 
 * [JavaFX 17 API Documentation](https://openjfx.io/javadoc/17/)
-* [CSCI 1302 JavaFX Bookmarks](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/javafx/javafx-bookmarks.md)
-* [CSCI 1302 JavaFX Tutorial](https://github.com/cs1302uga/cs1302-tutorials/blob/alsi/javafx/javafx.md)
+* [CSCI 1302 JavaFX Bookmarks](https://cs1302uga.github.io/cs1302-book/java/javafx/bookmarks.html)
+* [CSCI 1302 JavaFX Chapter](https://cs1302uga.github.io/cs1302-book/java/javafx/javafx-index.html)
 
 ### Git
 
