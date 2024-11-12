@@ -19,9 +19,9 @@ credit.
 
 | \# | Bonus | Deadline Option                       |
 |----|-------|---------------------------------------|
-| 1  | +10   | MON 2024-12-09 (DEC 09) @ 5:00 PM EST |
-| 2  | +5    | TUE 2024-12-10 (DEC 10) @ 5:00 PM EST |
-| 3  | +0    | WED 2024-12-11 (DEC 11) @ 5:00 PM EST |
+| 1  | +10   | MON 2024-12-09 (DEC 09) @ 3:30 PM EST |
+| 2  | + 5   | TUE 2024-12-10 (DEC 10) @ 3:30 PM EST |
+| 3  | + 0   | WED 2024-12-11 (DEC 11) @ 3:30 PM EST |
 
 
 For both logistical and policy-related reasons, the usual late-work
