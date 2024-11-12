@@ -6,7 +6,7 @@
 ![Image from page 400 of "The Palm of Alpha Tau Api" (1880)](https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-banner.png)
 
 This document contains the description for the **cs1302-api-app**
-project assigned to the students in the Spring 2024 CSCI 1302 classes at
+project assigned to the students in the Fall 2024 CSCI 1302 classes at
 the University of Georgia.
 
 **Please read the entirety of this file before beginning your project.**
@@ -20,9 +20,9 @@ credit.
 
 | \# | Bonus | Deadline Option                       |
 |----|-------|---------------------------------------|
-| 1  | +10   | SAT 2024-05-04 (MAY 04) @ 5:00 PM EST |
-| 2  | +5    | SUN 2024-05-05 (MAY 05) @ 5:00 PM EST |
-| 3  | +0    | MON 2024-05-06 (May 06) @ 5:00 PM EST |
+| 1  | +10   | MON 2024-12-09 (DEC 09) @ 5:00 PM EST |
+| 2  | +5    | TUE 2024-12-10 (DEC 10) @ 5:00 PM EST |
+| 3  | +0    | WED 2024-12-11 (DEC 11) @ 5:00 PM EST |
 
 
 For both logistical and policy-related reasons, the usual late-work
