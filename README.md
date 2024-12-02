@@ -88,7 +88,7 @@ Your application must automate the process of connecting two different APIs for 
     1.  **You are required to integrate two or more RESTful JSON APIs
         from the "public-apis" list above in your final project submission.**
 
-        For each API, you need to be able to answer **yes** to the
+        <a id="api-questions-1"></a>For each API, you need to be able to answer **yes** to the
         following questions -- they are all questions that can be
         self-determined based on the project description, its
         appendices, the related readings, and what you learned in class:
@@ -112,7 +112,7 @@ Your application must automate the process of connecting two different APIs for 
 
     3.  **Your app must integrate the two APIs in a meaningful way.**
 
-        For each API, you need to be able to answer **yes** to the
+        <a id="api-questions-2"></a>For each API, you need to be able to answer **yes** to the
         following questions -- they are all questions that can be
         self-determined based on the project description, its
         appendices, the related readings, and what you learned in class:
