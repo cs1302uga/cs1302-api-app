@@ -19,9 +19,9 @@ credit.
 
 | \# | Bonus | Deadline Option                        |
 |----|-------|----------------------------------------|
-| 1  | +10   | SUN 2025-05-04 (MAY 04) @ 03:30 PM EST |
-| 2  | + 5   | MON 2025-05-05 (MAY 05) @ 03:30 PM EST |
-| 3  | + 0   | TUE 2025-05-06 (MAY 06) @ 03:30 PM EST |
+| 1  | +10   | SAT 2025-05-04 (MAY 03) @ 03:30 PM EST |
+| 2  | + 5   | SUN 2025-05-05 (MAY 04) @ 03:30 PM EST |
+| 3  | + 0   | MON 2025-05-05 (MAY 05) @ 03:30 PM EST |
 
 
 For both logistical and policy-related reasons, the usual late-work
