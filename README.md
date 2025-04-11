@@ -1,6 +1,6 @@
-# CSCI 1302 - Api App v2024.fa
+# CSCI 1302 - Api App v2025.sp
 
-![Approved for Fall 2024](https://img.shields.io/badge/Approved%20for-Fall%202024-green)
+![Approved for Spring 2025](https://img.shields.io/badge/Approved%20for-Spring%202025-blue)
 
 ![Image from page 400 of "The Palm of Alpha Tau Api" (1880)](https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-banner.png)
 
@@ -17,11 +17,11 @@ final submission via the submit command before the date/times listed
 below automatically receive the associated Submission-Based (SB) extra
 credit.
 
-| \# | Bonus | Deadline Option                       |
-|----|-------|---------------------------------------|
-| 1  | +10   | MON 2024-12-09 (DEC 09) @ 3:30 PM EST |
-| 2  | + 5   | TUE 2024-12-10 (DEC 10) @ 3:30 PM EST |
-| 3  | + 0   | WED 2024-12-11 (DEC 11) @ 3:30 PM EST |
+| \# | Bonus | Deadline Option                        |
+|----|-------|----------------------------------------|
+| 1  | +10   | SUN 2025-05-04 (MAY 04) @ 12:00 PM EST |
+| 2  | + 5   | MON 2025-05-05 (MAY 05) @ 12:00 PM EST |
+| 3  | + 0   | TUE 2025-05-06 (MAY 06) @ 12:00 PM EST |
 
 
 For both logistical and policy-related reasons, the usual late-work
