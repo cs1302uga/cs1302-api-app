@@ -57,19 +57,19 @@ story of your feature development.
 
 Once your feature works, it's time to merge the branch back into `main`.
 We recommend that you follow the "Rule of Thumb" mentioned earlier, then
-use the following commands directly inside your `cs1302-omega`
+use the following commands directly inside your `cs1302-api-app`
 directory:
 
 ```
 $ git checkout main
-$ ,/prepare-merge.sh short-feature-name
+$ ./prepare-merge.sh short-feature-name
 $ git merge short-feature-name
 $ git pull origin main
 $ git push origin --all
 ```
 
 NOTE
-The `prepare-merge.sh` script appends a timestamp to your `README.rst`
+The `prepare-merge.sh` script appends a timestamp to your `README.md`
 in the `main` branch, then stages and commits that change. This ensures
 that `main` and your feature branch have divergent histories, which
 makes the merge look a little nicer in your log.
