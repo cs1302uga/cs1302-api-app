@@ -1,11 +1,11 @@
-# CSCI 1302 - Api App v2025.sp
+# CSCI 1302 - Api App v2025.fa
 
-![Approved for Spring 2025](https://img.shields.io/badge/Approved%20for-Spring%202025-blue)
+![Approved for Fall 2025](https://img.shields.io/badge/Approved%20for-Fall%202025-green)
 
 ![Image from page 400 of "The Palm of Alpha Tau Api" (1880)](https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-banner.png)
 
 This document contains the description for the **cs1302-api-app**
-project assigned to the students in the Fall 2024 CSCI 1302 classes at
+project assigned to the students in the Fall 2025 CSCI 1302 classes at
 the University of Georgia.
 
 **Please read the entirety of this file before beginning your project.**
@@ -19,9 +19,9 @@ credit.
 
 | \# | Bonus | Deadline Option                        |
 |----|-------|----------------------------------------|
-| 1  | +10   | SAT 2025-05-03 (MAY 03) @ 03:30 PM EST |
-| 2  | + 5   | SUN 2025-05-04 (MAY 04) @ 03:30 PM EST |
-| 3  | + 0   | MON 2025-05-05 (MAY 05) @ 03:30 PM EST |
+| 1  | +10   | MON 2025-12-08 (MAY 03) @ 03:30 PM EST |
+| 2  | + 5   | TUE 2025-12-09 (MAY 04) @ 03:30 PM EST |
+| 3  | + 0   | WED 2025-12-10 (MAY 05) @ 03:30 PM EST |
 
 
 For both logistical and policy-related reasons, the usual late-work
@@ -33,7 +33,7 @@ NOT be graded.**
 ## Academic Honesty
 
 You agree to the Academic Honesty policy as outlined in the course
-syllabus and the University honesty website. Furthermore, you must
+syllabus and the University's honesty website. Furthermore, you must
 adhere to the copyright notice and licensing information at the bottom
 of this document.
 
