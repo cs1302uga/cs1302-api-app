@@ -20,7 +20,7 @@ import java.util.Properties;
  * To run this example on Odin, use the following commands:
  *
  * <pre>
- * $ ./run.sh example.PropertiesExample
+ * $ ./run.sh cs1302.api.example.PropertiesExample
  * </pre>
  *
  * or both of these commands:
@@ -41,6 +41,7 @@ public class PropertiesExample {
      */
     public static void main(String[] args) {
 
+        // path to the config.properties file, relative to the project root directory
         String configPath = "resources/config.properties";
 
         // the following try-statement is called a try-with-resources statement

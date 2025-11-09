@@ -19,7 +19,7 @@ import com.google.gson.GsonBuilder;
  * To run this example on Odin, use the following command:
  *
  * <pre>
- * $ ./run.sh example.OpenLibrarySearchApiExample
+ * $ ./run.sh cs1302.api.example.OpenLibrarySearchApiExample
  * </pre>
  *
  * or both of these commands:

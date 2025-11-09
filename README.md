@@ -57,7 +57,7 @@ get the information or content that they want. Your app needs to do more
 than just download and display responses from the external APIs, it
 needs to combine the responses in some meaningful way. Combining
 responses means that the response from one API should be used (at least
-in part) to query the second API (see below for more details). 
+in part) to query the second API (see below for more details).
 Your application must automate the process of connecting two different APIs for a single purpose.
 
 -   Many services provide **free access** to their RESTful JSON APIs --
@@ -80,7 +80,7 @@ Your application must automate the process of connecting two different APIs for 
 
 	Please make sure you only use APIs that are safe for work and
 	adhere to the *Non-Discrimination and Anti-Harassment Policy* mentioned
-	later in the project's requirements. 
+	later in the project's requirements.
 
 -   You **must** choose your APIs according to the following guidelines.
     Failure to do so may have a negative impact on your project grade:
@@ -288,11 +288,11 @@ may lead to an academic honesty violation.
 ### DEADLINE.md (10 points)
 
 The included `DEADLINE.md` file must adequately describe your application,
-explain the APIs used (the URLs used to request data, and the rate limits (if any)), 
+explain the APIs used (the URLs used to request data, and the rate limits (if any)),
 and provide thoughtful comments on what you learned. More
-details can be found in the provided 
+details can be found in the provided
 [`DEADLINE.md` template](https://github.com/cs1302uga/cs1302-api-app/blob/main/meta/DEADLINE.md).
-  
+
 ### Local Assets / Resources (10 points)
 
 All assets (e.g., images), except for assets discovered using an
@@ -370,11 +370,11 @@ strings using `fromJson` are described in the
 ### No use of the `openStream()` or similar methods in `URL`
 
 You may NOT use or mention the `openStream()`, `openConnection()` and `getContent()`
-methods provided by the `java.net.URL` class nor should you use or mention `java.net.HttpURLConnection`. 
-If you need to access web content, then use the `HttpClient`, `HttpRequest`, and `HttpResponse<T>` 
+methods provided by the `java.net.URL` class nor should you use or mention `java.net.HttpURLConnection`.
+If you need to access web content, then use the `HttpClient`, `HttpRequest`, and `HttpResponse<T>`
 types in the `java.net.http` package as described in the
 [HTTP chapter](https://cs1302uga.github.io/cs1302-book/java/http/http-index.html). Use of
-other types in the `java.net.http` package is allowed if they are used to support `HttpClient`, 
+other types in the `java.net.http` package is allowed if they are used to support `HttpClient`,
 `HttpRequest`, and/or `HttpResponse<T>`.
 
 ### Final Project == Final Exam
@@ -513,28 +513,37 @@ to set up your public and private key pair on Odin and GitHub.
     If you have trouble getting any of this to work, then try asking on
     Piazza or see someone during office hours.
 
-5.  Clean, compile, and run the starter code using the provided `run.sh`
-    script:
+5.  Clean, compile, and run the starter code using the provided
+    `run.sh` script. By default, the `run.sh` script is setup to
+    automatically run the `cs1302.api.ApiDriver` class when no
+    command-line arguments are provided:
 
         $ ./run.sh
 
-    Here is the expected output, which also shows the related Maven
-    commands, should you wish to type them out manually:
+    Here is the expected terminal output, which also shows the related
+    Maven commands, should you wish to type them out manually:
 
-        + mvn -q -e clean
-        + mvn -q -e compile
-        + mvn -q -e exec:exec
+        + mvn -q clean compile verify
+        + mvn -e -q exec:exec -Dexec.mainClass=cs1302uga.api/cs1302.api.ApiDriver
 
-    By default, the project is setup to automatically run the
-    `cs1302.api.ApiDriver` class. If you wish to run another driver
-    class, then you can provide the simple class name of a class with a
-    `main` method in the `cs1302.api` package after the script name:
+    If you wish to run another driver class, then you can supply its
+    FQN as a command-line argument after the script name.  For
+    example, to run the `PropertiesExample` class included with the
+    starter code, run:
 
-        $ ./run.sh PropertiesExample
+        $ ./run.sh cs1302.api.example.PropertiesExample
 
-    Any other command-line options that you add after the script name
-    will be added to the end of the `mvn` command that executes
-    `exec:exec`.
+    Here is the expected terminal output, which also shows the related
+    Maven commands, should you wish to type them out manually:
+
+        + mvn -q clean compile verify
+        + mvn -e -q exec:exec -Dexec.mainClass=cs1302uga.api/cs1302.api.example.PropertiesExample
+
+    For completeness, it should be noted that you can also run
+    `cs1302.api.ApiDriver` by explicitly supplying its FQN as a
+    command-line argument when using the `run.sh` script:
+
+        $ ./run.sh cs1302.api.ApiDriver
 
 ## Submission Instructions
 
