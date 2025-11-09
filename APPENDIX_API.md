@@ -2,9 +2,26 @@
 
 ## Checking for Rate Limits
 
-Some RESTful JSON APIs impose limits on how often users can make API requests. Some APIs with rate limits set the status code of a response to [429 (Too Many Requests)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) when a user exceeds their rate limit and include a [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) header (or various [X-RateLimit-](https://www.ietf.org/archive/id/draft-polli-ratelimit-headers-02.html#name-header-specifications) headers) in the response to explicitly let us know how long we should wait before sending another request.
+Some RESTful JSON APIs impose limits on how often users can make API
+requests. Some APIs with rate limits set the status code of a response
+to [429 (Too Many
+Requests)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)
+when a user exceeds their rate limit and include a
+[Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After)
+header (or various
+[X-RateLimit-](https://www.ietf.org/archive/id/draft-polli-ratelimit-headers-02.html#name-header-specifications)
+headers) in the response to explicitly let us know how long we should
+wait before sending another request.
 
-Information about an API's "rate limits" can usually be found in the documentation provided by the API developers or provider. If you are still unsure whether rate limits are imposed after consulting the API's documentation, then you can usually figure it out yourself using `curl`, a Unix command that lets you send an HTTP request in the terminal and see its associated HTTP response. For example, the following `curl` example would tell us that we need to wait at least 300 seconds (i.e., 5 minutes) before sending another request (see "`man curl`" for information about `curl`'s options):
+Information about an API's "rate limits" can usually be found in the
+documentation provided by the API developers or provider. If you are
+still unsure whether rate limits are imposed after consulting the
+API's documentation, then you can usually figure it out yourself using
+`curl`, a Unix command that lets you send an HTTP request in the
+terminal and see its associated HTTP response. For example, the
+following `curl` example would tell us that we need to wait at least
+300 seconds (i.e., 5 minutes) before sending another request (see
+"`man curl`" for information about `curl`'s options):
 
 ```
 $ curl -IL -X GET 'REQUEST-URI'
@@ -15,7 +32,14 @@ HTTP/1.2 429 Too Many Requests
 Retry-After: 300
 ```
 
-You can access the headers associated with an `HttpResponse<T>` obect in in your Java code by calling the object's `headers()` method. After that, you can call `getFirstValue(name)` on the `HttpHeaders` object to access the value of a specific header entry where `name` is the lowercase version of the desired header's name. Here is a simple example (without error handling) that attempts to get, parse, and use the value of the`"Retry-After"` header associated with an `HttpResponse<String>` object:
+You can access the headers associated with an `HttpResponse<T>` obect
+in in your Java code by calling the object's `headers()` method. After
+that, you can call `getFirstValue(name)` on the `HttpHeaders` object
+to access the value of a specific header entry where `name` is the
+lowercase version of the desired header's name. Here is a simple
+example (without error handling) that attempts to get, parse, and use
+the value of the`"Retry-After"` header associated with an
+`HttpResponse<String>` object:
 
 ```java
 Optional<String> retryAfter = response.headers()
@@ -28,7 +52,9 @@ if (rettryAfter.isPresent()) {
 } // if
 ```
 
-See the documentation for [the `headers()` method](https://docs.oracle.com/en/java/javase/17/docs/api/java.net.http/java/net/http/HttpResponse.html#headers())  in `HttpResponse<T>` for more information.
+See the documentation for [the `headers()`
+method](https://docs.oracle.com/en/java/javase/17/docs/api/java.net.http/java/net/http/HttpResponse.html#headers())
+in `HttpResponse<T>` for more information.
 
 ## API Example: Open Library Search API
 
@@ -53,8 +79,8 @@ Remember, the `value` in `param=value` contained in a query string
 needs to be url-encoded by calling
 `URLEncoder.encode(value, StandardCharsets.UTF_8)`.
 
-The API documentation says the JSON response should look something like
-this:
+The API documentation says the JSON response should look something
+like this:
 
 ```json
 {
@@ -89,18 +115,18 @@ store the API key in `resources/config.properties` like this:
 
     thedogapi.apikey=YOUR-API-KEY
 
-An example of how to read the values from `resources/config.properties`
-is provided in the starter code
+An example of how to read the values from
+`resources/config.properties` is provided in the starter code
 [here](https://github.com/cs1302uga/cs1302-api-app/blob/main/src/main/java/cs1302/api/example/PropertiesExample.java).
-We will assume that your code retrieves your API key and stores it in a
-string using some code similar to this:
+We will assume that your code retrieves your API key and stores it in
+a string using some code similar to this:
 
 ``` java
 final String apiKey = config.getProperty("thedogapi.apikey");
 ```
 
-According to the API documentation, the endpoint for TheDogApi is this
-URL:
+According to the API documentation, the endpoint URI for TheDogApi is
+this URL:
 
     "https://api.thedogapi.com/v1"
 
