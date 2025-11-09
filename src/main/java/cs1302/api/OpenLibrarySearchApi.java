@@ -55,6 +55,10 @@ public class OpenLibrarySearchApi {
 
     private static final String ENDPOINT = "https://openlibrary.org/search.json";
 
+    /**
+     * Main entry-point for the application.
+     * @param args The command-line arguments.
+     */
     public static void main(String[] args) {
         OpenLibrarySearchApi
             .search("the lord of the rings")

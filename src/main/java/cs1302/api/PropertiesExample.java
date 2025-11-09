@@ -26,6 +26,10 @@ import java.util.Properties;
  */
 public class PropertiesExample {
 
+    /**
+     * Main entry-point for the application.
+     * @param args The command-line arguments.
+     */
     public static void main(String[] args) {
 
         String configPath = "resources/config.properties";
