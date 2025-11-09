@@ -1,4 +1,4 @@
-package cs1302.api;
+package cs1302.api.example;
 
 import java.io.IOException;
 import java.net.URI;
@@ -8,7 +8,6 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.net.http.HttpRequest;
 import java.nio.charset.StandardCharsets;
-import java.util.Optional;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -17,30 +16,24 @@ import com.google.gson.GsonBuilder;
  * Example using Open Library Search API.
  *
  * <p>
- * To run this example on Odin, use the following commands:
+ * To run this example on Odin, use the following command:
  *
  * <pre>
- * $ mvn clean compile
- * $ mvn exec:java -Dexec.mainClass=cs1302.api.OpenLibrarySearchApi
+ * $ ./run.sh example.OpenLibrarySearchApiExample
  * </pre>
+ *
+ * or both of these commands:
+ *
+ * <pre>
+ * $ mvn -e clean compile verify
+ * $ mvn -e exec:exec -Dexec.mainClass=cs1302uga.api/cs1302.api.example.OpenLibrarySearchApiExample
+ * </pre>
+ *
+ * @see <a href="https://github.com/cs1302uga/cs1302-api-app/blob/main/APPENDIX_API.md#api-example-open-library-search-api">API Example: Open Library Search API</a>
+ * @see cs1302.api.example.OpenLibraryResult
+ * @see cs1302.api.example.OpenLibraryDoc
  */
-public class OpenLibrarySearchApi {
-
-    /**
-     * Represents an Open Library Search API document.
-     */
-    private static class OpenLibraryDoc {
-        String type;
-        String title;
-    } // OpenLibraryDoc
-
-    /**
-     * Represents an Open Library Search API result.
-     */
-    private static class OpenLibraryResult {
-        int numFound;
-        OpenLibraryDoc[] docs;
-    } // OpenLibraryResult
+public class OpenLibrarySearchApiExample {
 
     /** HTTP client. */
     public static final HttpClient HTTP_CLIENT = HttpClient.newBuilder()
@@ -53,6 +46,7 @@ public class OpenLibrarySearchApi {
         .setPrettyPrinting()                          // enable nice output when printing
         .create();                                    // builds and returns a Gson object
 
+    /** Endpoint URI for the Open Library Search API. */
     private static final String ENDPOINT = "https://openlibrary.org/search.json";
 
     /**
@@ -60,22 +54,17 @@ public class OpenLibrarySearchApi {
      * @param args The command-line arguments.
      */
     public static void main(String[] args) {
-        OpenLibrarySearchApi
-            .search("the lord of the rings")
-            .ifPresent(response -> example1(response));
+        String q = "the lord of the rings";
+        OpenLibraryResult result = OpenLibrarySearchApiExample.search(q);
+        if (result == null) {
+            System.err.printf("error fetching result for: %s\n", q);
+        } else {
+            System.out.printf("numFound = %d\n", result.numFound);
+            for (OpenLibraryDoc doc: result.docs) {
+                System.out.println(doc.title);
+            } // for
+        } // if
     } // main
-
-    /**
-     * An example of some things you can do with a response.
-     * @param result the ope library search result
-     */
-    private static void example1(OpenLibraryResult result) {
-        // print what we found
-        System.out.printf("numFound = %d\n", result.numFound);
-        for (OpenLibraryDoc doc: result.docs) {
-            System.out.println(doc.title);
-        } // for
-    } // example1
 
     /**
      * Return an {@code Optional} describing the root element of the JSON
@@ -83,19 +72,20 @@ public class OpenLibrarySearchApi {
      * @param q query string
      * @return an {@code Optional} describing the root element of the response
      */
-    public static Optional<OpenLibraryResult> search(String q) {
+    public static OpenLibraryResult search(String q) {
         System.out.printf("Searching for: %s\n", q);
         System.out.println("This may take some time to download...");
         try {
             String url =  String.format(
                 "%s?q=%s",
-                OpenLibrarySearchApi.ENDPOINT,
-                URLEncoder.encode(q, StandardCharsets.UTF_8));
-            String json = OpenLibrarySearchApi.fetchString(url);
+                OpenLibrarySearchApiExample.ENDPOINT,
+                URLEncoder.encode(q, StandardCharsets.UTF_8)
+            );
+            String json = OpenLibrarySearchApiExample.fetchString(url);
             OpenLibraryResult result = GSON.fromJson(json, OpenLibraryResult.class);
-            return Optional.<OpenLibraryResult>ofNullable(result);
+            return result;
         } catch (IllegalArgumentException | IOException | InterruptedException e) {
-            return Optional.<OpenLibraryResult>empty();
+            return null;
         } // try
     } // search
 
@@ -113,11 +103,11 @@ public class OpenLibrarySearchApi {
             .build();
         HttpResponse<String> response = HTTP_CLIENT
             .send(request, BodyHandlers.ofString());
-        final int statusCode = response.statusCode();
+        int statusCode = response.statusCode();
         if (statusCode != 200) {
             throw new IOException("response status code not 200:" + statusCode);
         } // if
         return response.body().trim();
     } // fetchString
 
-} // OpenLibrarySearchApi
+} // OpenLibrarySearchApiExample

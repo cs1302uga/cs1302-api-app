@@ -1,4 +1,4 @@
-package cs1302.api;
+package cs1302.api.example;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -20,9 +20,18 @@ import java.util.Properties;
  * To run this example on Odin, use the following commands:
  *
  * <pre>
- * $ mvn clean compile
- * $ mvn exec:java -Dexec.mainClass=cs1302.api.PropertiesExample
+ * $ ./run.sh example.PropertiesExample
  * </pre>
+ *
+ * or both of these commands:
+ *
+ * <pre>
+ * $ mvn -e clean compile verify
+ * $ mvn -e exec:exec -Dexec.mainClass=cs1302uga.api/cs1302.api.example.PropertiesExample
+ * </pre>
+ *
+ * @see <a href="https://github.com/cs1302uga/cs1302-api-app/blob/main/APPENDIX_API.md#api-example-thedogapi">API Example: TheDogApi</a>
+ * @see java.util.Properties
  */
 public class PropertiesExample {
 
