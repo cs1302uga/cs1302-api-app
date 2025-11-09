@@ -1,6 +1,4 @@
 #!/bin/bash -ex
 
-mvn -q clean
-mvn -q compile
-mvn -q verify
-mvn -q exec:exec -Dexec.mainClass=cs1302uga.api/cs1302.api.${1-ApiDriver}
+mvn -e -q clean compile verify
+mvn -e -q exec:exec -Dexec.mainClass=cs1302uga.api/cs1302.api.${1-ApiDriver}
