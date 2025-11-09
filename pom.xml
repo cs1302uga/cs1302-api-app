@@ -22,6 +22,7 @@
     <!-- version settings -->
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.release>17</maven.compiler.release>
     <gson.version>2.10.1</gson.version>
     <openjfx.version>17.0.17</openjfx.version>
     <!-- general settings -->
@@ -214,18 +215,6 @@
         </configuration>
       </plugin>
       <plugin>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>cs1302uga-verify-dependency-tree</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>tree</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
         <artifactId>maven-enforcer-plugin</artifactId>
         <executions>
           <execution>
@@ -363,5 +352,55 @@
       <url>${cs1302.webwork.path}</url>
     </site>
   </distributionManagement>
+
+  <profiles>
+    <profile>
+      <!-- $ mvn -P deps clean verify -->
+      <id>deps</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>cs1302uga-verify-dependency-tree</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>tree</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>jdeps</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>exec</goal>
+                </goals>
+                <configuration>
+                  <executable>jdeps</executable>
+                  <arguments>
+                    <argument>-q</argument>
+                    <argument>--module-path</argument>
+                    <modulepath/>
+                    <argument>--class-path</argument>
+                    <classpath/>
+                    <argument>--multi-release</argument>
+                    <argument>${maven.compiler.release}</argument>
+                    <argument>-verbose:class</argument>
+                    <argument>target/classes</argument>
+                  </arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 
 </project>
