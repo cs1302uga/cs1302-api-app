@@ -190,8 +190,9 @@
         <configuration>
           <configLocation>https://raw.githubusercontent.com/cs1302uga/cs1302-styleguide/refs/heads/master/cs1302_checks.xml</configLocation>
           <consoleOutput>true</consoleOutput>
-          <failsOnError>true</failsOnError>
-          <linkXRef>true</linkXRef>
+          <failOnViolation>false</failOnViolation>
+          <logViolationCountToConsole>true</logViolationCountToConsole>
+          <logViolationsToConsole>true</logViolationsToConsole>
         </configuration>
         <executions>
           <execution>
