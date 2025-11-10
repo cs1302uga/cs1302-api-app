@@ -10,6 +10,7 @@ import java.net.http.HttpRequest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.SerializedName;
 
 /**
  * Example using Open Library Search API.
@@ -108,3 +109,33 @@ public class OpenLibrarySearchApiExample {
     } // fetchString
 
 } // OpenLibrarySearchApiExample
+
+/**
+ * Represents an Open Library Search API result
+ *
+ * @param numFound
+ * @param docs
+ *
+ * <p>
+ *
+ * An immutable data class (Java 14+). The record keyword auto-generates
+ * boilerplate code for immutable data carriers:
+ *  - Constructor: OpenLibraryResult(int numFound, OpenLibraryDoc[] docs)
+ *  - Getters: result.numFound(), result.docs()
+ *  - toString()
+ *  - equals() and hashCode(): compares all fields
+ *  - implements Serializable hooks (used for converting an object to a Java specific byte-stream encoding)
+ */
+record OpenLibraryResult(
+        @SerializedName("num_found") // Used for gson.fromJson() decoding when the name of the member variable does not match the JSON field
+        int numFound,
+        OpenLibraryDoc[] docs
+) {}
+
+/**
+ * Represents an Open Library Search API document
+ *
+ * @param type
+ * @param title
+ */
+record OpenLibraryDoc(String type, String title) {}
