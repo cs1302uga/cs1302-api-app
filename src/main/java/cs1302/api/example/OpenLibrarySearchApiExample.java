@@ -7,6 +7,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.net.http.HttpRequest;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -130,7 +131,17 @@ record OpenLibraryResult(
         @SerializedName("num_found") // Used for gson.fromJson() decoding when the name of the member variable does not match the JSON field
         int numFound,
         OpenLibraryDoc[] docs
-) {}
+) {
+    /*
+     * Example of overriding an auto-generated function with the `record` class.
+     * Not necessarily needed, but this shows that you can have custom returns,
+     * which may be useful for getter methods.
+     */
+    @Override
+    public String toString() {
+        return String.format("numFound = %d, docs = %s", numFound, Arrays.toString(docs));
+    }
+}
 
 /**
  * Represents an Open Library Search API document
