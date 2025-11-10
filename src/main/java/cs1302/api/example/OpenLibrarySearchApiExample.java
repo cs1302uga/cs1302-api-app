@@ -2,12 +2,11 @@ package cs1302.api.example;
 
 import java.io.IOException;
 import java.net.URI;
-import java.net.URLEncoder;
+import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.net.http.HttpRequest;
-import java.nio.charset.StandardCharsets;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -76,17 +75,15 @@ public class OpenLibrarySearchApiExample {
         System.out.printf("Searching for: %s\n", q);
         System.out.println("This may take some time to download...");
         try {
-            String url =  String.format(
-                "%s?q=%s",
-                OpenLibrarySearchApiExample.ENDPOINT,
-                URLEncoder.encode(q, StandardCharsets.UTF_8)
-            );
-            String json = OpenLibrarySearchApiExample.fetchString(url);
-            OpenLibraryResult result = GSON.fromJson(json, OpenLibraryResult.class);
-            return result;
+            URI uri = new URI(OpenLibrarySearchApiExample.ENDPOINT, "?q=", q);
+            String json = OpenLibrarySearchApiExample.fetch(uri);
+            return GSON.fromJson(json, OpenLibraryResult.class);
         } catch (IllegalArgumentException | IOException | InterruptedException e) {
             return null;
-        } // try
+        } catch (URISyntaxException e) {
+            // URL is malformed
+            throw new RuntimeException(e);
+        } // catch
     } // search
 
     /**
@@ -97,9 +94,9 @@ public class OpenLibrarySearchApiExample {
      * @throws InterruptedException if the HTTP client's {@code send} method is
      *    interrupted
      */
-    private static String fetchString(String uri) throws IOException, InterruptedException {
+    private static String fetch(URI uri) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
-            .uri(URI.create(uri))
+            .uri(uri)
             .build();
         HttpResponse<String> response = HTTP_CLIENT
             .send(request, BodyHandlers.ofString());
