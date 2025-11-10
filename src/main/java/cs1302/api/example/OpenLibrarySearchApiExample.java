@@ -59,9 +59,9 @@ public class OpenLibrarySearchApiExample {
         if (result == null) {
             System.err.printf("error fetching result for: %s\n", q);
         } else {
-            System.out.printf("numFound = %d\n", result.numFound);
-            for (OpenLibraryDoc doc: result.docs) {
-                System.out.println(doc.title);
+            System.out.printf("numFound = %d\n", result.numFound());
+            for (OpenLibraryDoc doc: result.docs()) {
+                System.out.println(doc.title());
             } // for
         } // if
     } // main
