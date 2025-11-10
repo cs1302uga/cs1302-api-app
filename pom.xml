@@ -30,6 +30,7 @@
     <teamlist.showAvatarImages>false</teamlist.showAvatarImages>
     <exec.addResourcesToClasspath>true</exec.addResourcesToClasspath>
     <exec.cleanupDaemonThreads>false</exec.cleanupDaemonThreads>
+    <guice_custom_class_loading>CHILD</guice_custom_class_loading>
     <!-- project settings -->
     <exec.mainClass>cs1302uga.api/cs1302.api.ApiDriver</exec.mainClass>
     <cs1302.project.description>https://github.com/cs1302uga/${project.name}</cs1302.project.description>
