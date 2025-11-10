@@ -3,10 +3,12 @@ package cs1302.api.example;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.net.http.HttpRequest;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 import com.google.gson.Gson;
@@ -77,13 +79,16 @@ public class OpenLibrarySearchApiExample {
         System.out.printf("Searching for: %s\n", q);
         System.out.println("This may take some time to download...");
         try {
-            URI uri = new URI(OpenLibrarySearchApiExample.ENDPOINT, "?q=", q);
+            String url = ENDPOINT + "?q=" + URLEncoder.encode(q, StandardCharsets.UTF_8);
+            URI uri = new URI(url);
             String json = OpenLibrarySearchApiExample.fetch(uri);
             return GSON.fromJson(json, OpenLibraryResult.class);
         } catch (IllegalArgumentException | IOException | InterruptedException e) {
+            System.err.printf("search() error: %s\n", e.getMessage());
             return null;
         } catch (URISyntaxException e) {
             // URL is malformed
+            System.err.printf("URISyntaxException: %s\n", e.getMessage());
             throw new RuntimeException(e);
         } // catch
     } // search
