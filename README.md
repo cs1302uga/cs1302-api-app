@@ -46,19 +46,18 @@ requirement.
 
 ## Project Description
 
-Your goal is to implement, from scratch, an application in Java 17 using
-JavaFX 17 that incorporates a preponderance of the topics introduced in
-this course in a way that demonstrates that you have met the learning
-outcomes related to those topics.
-
-Your application must integrate two or more external RESTful JSON APIs
+Your goal is to implement, from scratch, an application that automates 
+the process of connecting two different RESTful JSON APIs for a single purpose.
+In other words, your project must combine two or more external APIs
 so that your users don't need to utilize multiple services themselves to
 get the information or content that they want. Your app needs to do more
 than just download and display responses from the external APIs, it
 needs to combine the responses in some meaningful way. Combining
 responses means that the response from one API should be used (at least
 in part) to query the second API (see below for more details).
-Your application must automate the process of connecting two different APIs for a single purpose.
+
+Additionally, you must use Java 17, JavaFX, GSON, and the HTTP 
+classes/interfaces discussed in the book. 
 
 -   Many services provide **free access** to their RESTful JSON APIs --
     a RESTful JSON API is one that you can access with an HTTP client
@@ -73,7 +72,7 @@ Your application must automate the process of connecting two different APIs for 
 
 	Please note that the list above is a public resource and that
 	not every API listed has been tested by the instructional staff
-	nor guaranteed to be safe for work. All of the APIs list should,
+	nor guaranteed to be safe for work. All of the APIs in the list should,
 	however, offer full, free access or at least a free access tier
 	and do not depend on the purchase of a device/service before a
 	request can be made.
@@ -89,9 +88,7 @@ Your application must automate the process of connecting two different APIs for 
         from the "public-apis" list above in your final project submission.**
 
         <a id="api-questions-1"></a>For each API, you need to be able to answer **yes** to the
-        following questions -- they are all questions that can be
-        self-determined based on the project description, its
-        appendices, the related readings, and what you learned in class:
+        following questions:
 
         -   Does the API method that you are trying to call have a URI
             associated with it that can be adjusted (e.g., by changing
@@ -102,7 +99,7 @@ Your application must automate the process of connecting two different APIs for 
 
 		**NOTE:** The APIs that you pick must NOT require "OAuth"
 		for authentication (for each API on the "public-apis" site, there is a column
-                indicating if OAuth is required). It is okay if an API key is required,
+        indicating if OAuth is required). It is okay if an API key is required,
 		and we even include an example that demonstrates how to
 		make a request involving an API key in the appendix. If you
 		use an API that requires an API key, then it is your responsibility
@@ -113,11 +110,12 @@ Your application must automate the process of connecting two different APIs for 
     3.  **Your app must integrate the two APIs in a meaningful way.**
 
         <a id="api-questions-2"></a>For each API, you need to be able to answer **yes** to the
-        following questions -- they are all questions that can be
-        self-determined based on the project description, its
-        appendices, the related readings, and what you learned in class:
+        following questions:
 
-        -   Is user input used to adjust your first API request?
+        -   Is user input used to adjust your first API request? Either a value typed
+            in or a selection made by the user must be sent to the API server as
+            part of the request. Note: user input must be a value/selection. Having
+            the user press a button to start the process is not sufficient.
         -   Is some part (or all) of the JSON response to your first API
             request used to adjust your second API request? The response
             can be modified by your application before being sent to the
@@ -128,12 +126,14 @@ Your application must automate the process of connecting two different APIs for 
         -   Does the JSON response to the second API request provide you
             with one or more pieces of information that are NOT included
             in the response from your first API request?
-
-        The last question implies that both APIs must play an important
-        role in the overall process that is automated by your app --
-        **it should NOT be possible to implement the functionality of
-        your app using only one of the APIs that you specifically
-        selected**.
+        -   Do I absolutely need both of the APIs that I am using or could
+            the process be completed using a single API? In other words,
+            both APIs must play an important role in the overall process
+            that is automated by your app.
+        -   Does my app directly access all APIs used in the project? You should
+            be using the URI provided by the API itself - not using a third-party
+            service such as Rapid API (or similar) for access.
+        -   Do both of my APIs return a JSON response?
 
         **Additional Notes:** There are some additional things that you
         should consider that are not explicitly stated in the project
@@ -162,7 +162,7 @@ Your application must automate the process of connecting two different APIs for 
         app includes a button that triggers multiple API requests, then
         should consider disabling the button while those requests are
         being made AND for some sensible extra amount of time after the
-        completion of those requests in order to reduce the rate of
+        completion of those requests to reduce the rate of
         request made by your app -- the exact amount of extra time will
         depend on the number of API requests your app makes as well as
         the rate limits imposed by the APIs. If your app needs to make
@@ -191,7 +191,7 @@ Your application must automate the process of connecting two different APIs for 
 
     If the API key needs to be set using an HTTP header, then refer
     to the example involving the GitHub API in the HTTP reading
-    posted earlier this semester.
+    in the course textbook.
 
 -   You should read the "Working with RESTful JSON APIs" appendix
     section before you write any code. A link to the appendix can
@@ -261,9 +261,7 @@ with no errors or warnings*.
 
 ### API Access (100 points)
 
-You must directly access any APIs used in your project. You are not
-allowed to use third-party services such as Rapid API (or similar) for
-access.
+Your app must combine two APIs in a meaningful way as described above.
 
 ### User-Friendly Experience (10 points)
 
@@ -429,7 +427,7 @@ immediate zero for the assignment. A list of the relevant software
 versions currently in use on Odin (at the time of this writing) is
 provided below for convenience.
 
-* **Apache Maven 3.9.6**
+* **Apache Maven 3.9.11**
   (https://maven.apache.org/)
 
 * **Java 17.0.10** (vendor: Oracle Corporation; **not OpenJDK**)
@@ -667,6 +665,19 @@ may also find the cs1302-gallery FAQ\_ a useful resource as well.
     feature is not currently available over X11 forwarding from Odin.
     We're sorry to say this, but **you should not attempt to add audio
     to your application** for this project.
+
+3. **Examples of Projects that would not be allowed:**
+
+   1. Get a random image of a dog from the Dog API and a random image of a cat from another API and then
+      show them next to each other.
+        - This example does not combine the APIs. The response (or part of the response)
+          from the first API is not used to query the second.
+        - User input is not used to adjust the query to the first API.
+   2. Get your latitude/longitude or other location information from API #1 and send the location information
+      to API #2 to get current weather, local events, etc.
+        - User input is not used to adjust the query to the first API - even if the user is required to click
+          a button to start the process.
+   3. An application that uses an API that responds with a image data(instead of JSON).
 
 [![license\_image](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
