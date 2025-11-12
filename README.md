@@ -430,7 +430,7 @@ provided below for convenience.
 * **Apache Maven 3.9.11**
   (https://maven.apache.org/)
 
-* **Java 17.0.10** (vendor: Oracle Corporation; **not OpenJDK**)
+* **Java 17.0.12** (vendor: Oracle Corporation; **not OpenJDK**)
   (https://www.oracle.com/java/technologies/downloads/)
 
 All other dependencies are handled via Maven.
