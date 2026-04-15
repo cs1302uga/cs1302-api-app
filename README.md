@@ -19,9 +19,9 @@ credit.
 
 | \# | Bonus | Deadline Option                        |
 |----|-------|----------------------------------------|
-| 1  | +10   | SAT 2026-05-02 (DEC 08) @ 03:30 PM EST |
-| 2  | + 5   | SUN 2026-05-03 (DEC 09) @ 03:30 PM EST |
-| 3  | + 0   | MON 2026-05-04 (DEC 10) @ 03:30 PM EST |
+| 1  | +10   | SAT 2026-05-02 (MAY 02) @ 03:30 PM EST |
+| 2  | + 5   | SUN 2026-05-03 (MAY 03) @ 03:30 PM EST |
+| 3  | + 0   | MON 2026-05-04 (MAY 04) @ 03:30 PM EST |
 
 
 For both logistical and policy-related reasons, the usual late-work
