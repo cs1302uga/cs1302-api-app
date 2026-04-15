@@ -1,6 +1,6 @@
-# CSCI 1302 - Api App v2025.fa
+# CSCI 1302 - Api App v2026.sp
 
-![Approved for Fall 2025](https://img.shields.io/badge/Approved%20for-Fall%202025-green)
+![Approved for Spring 2026](https://img.shields.io/badge/Approved%20for-TBA%20TBA-green)
 
 ![Image from page 400 of "The Palm of Alpha Tau Api" (1880)](https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-banner.png)
 
@@ -19,13 +19,13 @@ credit.
 
 | \# | Bonus | Deadline Option                        |
 |----|-------|----------------------------------------|
-| 1  | +10   | MON 2025-12-08 (DEC 08) @ 03:30 PM EST |
-| 2  | + 5   | TUE 2025-12-09 (DEC 09) @ 03:30 PM EST |
-| 3  | + 0   | WED 2025-12-10 (DEC 10) @ 03:30 PM EST |
+| 1  | +10   | SAT 2026-05-02 (DEC 08) @ 03:30 PM EST |
+| 2  | + 5   | SUN 2026-05-03 (DEC 09) @ 03:30 PM EST |
+| 3  | + 0   | MON 2026-05-04 (DEC 10) @ 03:30 PM EST |
 
 
 For both logistical and policy-related reasons, the usual late-work
-policy will not apply for this project, and no late submissions will be
+policy will not apply for this project, and no late submissions will be
 accepted after the last deadline option mentioned above. **To be clear,
 final project submissions received after the last deadline option will
 NOT be graded.**
@@ -46,133 +46,154 @@ requirement.
 
 ## Project Description
 
-Your goal is to implement, from scratch, an application that automates 
-the process of connecting two different RESTful JSON APIs for a single purpose.
-In other words, your project must combine two or more external APIs
-so that your users don't need to utilize multiple services themselves to
-get the information or content that they want. Your app needs to do more
-than just download and display responses from the external APIs, it
-needs to combine the responses in some meaningful way. Combining
-responses means that the response from one API should be used (at least
-in part) to query the second API (see below for more details).
+Your goal is to implement, from scratch, an application that automates
+the process of querying two different RESTful JSON APIs using JavaFX,
+custom components, HTTP requests, and JSON parsing. In other words,
+your app will showcase each RESTful JSON API by providing a way to let
+users interact with them without having write the code to send the API
+requests (i.e., the HTTP requests to each API) themselves. Your app
+needs to do more than just download and display responses from the
+external APIs, it needs to include and incorporate at least two custom
+components for each API: i) one for gathering the user input that will
+be used as part of the HTTP request to the API; and ii) one for
+showing the response in a "visual" way (more on that later). You are
+allowed and encouraged to include additional custom components, but
+having them is not strictly required. The APIs can be related so long
+as they meet other requirements (see below for more details).
 
-Additionally, you must use Java 17, JavaFX, GSON, and the HTTP 
-classes/interfaces discussed in the book. 
+Additionally, you must use Java 17, JavaFX, custom components
+strategy, GSON, and the HTTP classes/interfaces discussed in the book.
 
--   Many services provide **free access** to their RESTful JSON APIs --
-    a RESTful JSON API is one that you can access with an HTTP client
-    (like `java.net.http.HttpClient`) and parse with a JSON library like
-    Gson. For this project, you may only use RESTful JSON APIs and no
-    other kinds of APIs.
+-   Many services provide **free access** to their RESTful JSON APIs
+    -- a RESTful JSON API is one that you can access with an HTTP
+    client (like `java.net.http.HttpClient`) and parse with a JSON
+    library like Gson. For this project, you may only use RESTful JSON
+    APIs and no other kinds of APIs.
 
     You can find hundreds of APIs on the web; however, for this
 	project, you must pick your APIs from this list:
 
     * https://github.com/public-apis-dev/public-apis
 
-	Please note that the list above is a public resource and that
-	not every API listed has been tested by the instructional staff
-	nor guaranteed to be safe for work. All of the APIs in the list should,
-	however, offer full, free access or at least a free access tier
-	and do not depend on the purchase of a device/service before a
-	request can be made.
+	Please note that the list above is a public resource and that not
+	every API listed has been tested by the instructional staff nor
+	guaranteed to be safe for work. All of the APIs in the list
+	should, however, offer full, free access or at least a free access
+	tier and do not depend on the purchase of a device/service before
+	a request can be made.
 
 	Please make sure you only use APIs that are safe for work and
-	adhere to the *Non-Discrimination and Anti-Harassment Policy* mentioned
-	later in the project's requirements.
+	adhere to the *Non-Discrimination and Anti-Harassment Policy*
+	mentioned later in the project's requirements.
 
--   You **must** choose your APIs according to the following guidelines.
-    Failure to do so may have a negative impact on your project grade:
+-   You **must** choose your APIs and setup your custom components
+    according to the following guidelines.  Failure to do so may have
+    a negative impact on your project grade:
 
-    1.  **You are required to integrate two or more RESTful JSON APIs
-        from the "public-apis" list above in your final project submission.**
+    1.  **You are required to showcase two RESTful JSON APIs from the
+        "public-apis" list above in your final project submission.**
 
-        <a id="api-questions-1"></a>For each API, you need to be able to answer **yes** to the
-        following questions:
+        <a id="api-questions-1"></a>For each API, you need to be able
+        to answer **yes** to the following questions:
 
-        -   Does the API method that you are trying to call have a URI
-            associated with it that can be adjusted (e.g., by changing
-            parts of the URI or by setting an HTTP header) to make a
-            request?
+        -   Does the API method that you are trying to call have a way
+            to adjust the request (e.g., by changing parts of the URI,
+            by setting an HTTP header, or by using a POST request) to
+            make a request?
+
         -   Does the API method that you are trying to call return a
             JSON-formatted response?
 
-		**NOTE:** The APIs that you pick must NOT require "OAuth"
-		for authentication (for each API on the "public-apis" site, there is a column
-        indicating if OAuth is required). It is okay if an API key is required,
-		and we even include an example that demonstrates how to
-		make a request involving an API key in the appendix. If you
-		use an API that requires an API key, then it is your responsibility
-		to make sure you familiarize yourself with any restrictions
-		associated with the API key. **We also strongly encourage you
-		to NOT pick an API that requires you to pay for an API key.**
+        -   Does your app directly access the API using an HTTP request
+            (in the same way described in the textbook). You should be
+            using the URI provided by the API itself - not using a
+            third-party service such as Rapid API (or similar) for
+            access.
 
-    3.  **Your app must integrate the two APIs in a meaningful way.**
+		**NOTE:** The APIs that you pick must NOT require "OAuth" for
+		authentication (for each API on the "public-apis" site, there
+		is a column indicating if OAuth is required). It is okay if an
+		API key is required, and we even include an example that
+		demonstrates how to make a request involving an API key in the
+		appendix. If you use an API that requires an API key, then it
+		is your responsibility to make sure you familiarize yourself
+		with any restrictions associated with the API key. **We also
+		strongly encourage you to NOT pick an API that requires you to
+		pay for an API key.**
 
-        <a id="api-questions-2"></a>For each API, you need to be able to answer **yes** to the
-        following questions:
+    2. **Your app must showcase two RESTful JSON APIs using custom
+       components in a "visual" way.**
 
-        -   Is user input used to adjust your first API request? Either a value typed
-            in or a selection made by the user must be sent to the API server as
-            part of the request. Note: user input must be a value/selection. Having
-            the user press a button to start the process is not sufficient.
-        -   Is some part (or all) of the JSON response to your first API
-            request used to adjust your second API request? The response
-            can be modified by your application before being sent to the
-            second API. The input used for the second API (i.e., the information
-            used to adjust the request) must be different from the input
-            used for the first API -- the inputs can share something in
-            common, but they cannot be the same.
-        -   Does the JSON response to the second API request provide you
-            with one or more pieces of information that are NOT included
-            in the response from your first API request?
-        -   Do I absolutely need both of the APIs that I am using or could
-            the process be completed using a single API? In other words,
-            both APIs must play an important role in the overall process
-            that is automated by your app.
-        -   Does my app directly access all APIs used in the project? You should
-            be using the URI provided by the API itself - not using a third-party
-            service such as Rapid API (or similar) for access.
-        -   Do both of my APIs return a JSON response?
+       <a id="api-questions-2"></a>For each API, you need to be able
+       to answer **yes** to the following questions:
 
-        **Additional Notes:** There are some additional things that you
-        should consider that are not explicitly stated in the project
-        description:
+       - Does your app provide a custom component that includes the
+         necessary nodes to permit the user input that will be used to
+         adjust the API requests? This can be can be a small set of
+         values typed in, selections made by the user, or combinations
+         thereof that must be directly used to adjust the API
+         request. Note: each user input must be a
+         value/selection. Having the user press a button to start the
+         process is not sufficient. You can can have a button, but it
+         cannot be the only form of input.
 
-        1.  **The users of your app must not be required to provide
-            their own credentials to any service in order for it to
-            function (e.g., a username, password, or API key).** Your
-            app may incorporate *your* API keys, if needed, as described
-            in the appendix of the project description.
+       - Is some part (or all) of the JSON response displayed to the
+         user using a custom component in a "visual" way? Here is what
+         the instructors do NOT want to see: show the response as a
+         giant string using one or more text fields, text areas, text
+         flows, labels, etc. Here is what the instructors DO want to
+         see: any text from the response that is shown to the user
+         should be organized using labels and parent nodes (e.g.,
+         ``HBox``, ``VBox``, etc.), and images should be displayed
+         using ``Image`` objects via ``ImageView`` nodes when
+         approrpiate.
 
-        2.  **You are responsible for dealing with rate limits imposed by
-            the APIs that you use.** Many APIs have a limit on the number of
-            API calls that can be made by an app (e.g., number of calls per
-            second, per day, or in total). Please take precautions when
-            using such APIs in your project so that we can grade it. There
-            is no way for us to specify the exact number of times that we
-            will run your app when grading it. If your app exceeds any rate
-            limits while grading, then we will be unable to evaluate it.
+    3. **Additional Notes:** There are some additional things that
+       you should consider that are not explicitly stated in the
+       project description:
 
-        **SUGGESTION:** To reduce the risk that you will exceed a rate
-        limit, you are encouraged to write code to let your app keep
-        track of the number of API requests that it has made over
-        different periods of time and use that information to
-        programmatically delay subsequent calls. For example, if your
-        app includes a button that triggers multiple API requests, then
-        should consider disabling the button while those requests are
-        being made AND for some sensible extra amount of time after the
-        completion of those requests to reduce the rate of
-        request made by your app -- the exact amount of extra time will
-        depend on the number of API requests your app makes as well as
-        the rate limits imposed by the APIs. If your app needs to make
-        more calls than it is allowed to make due to an API rate limit,
-        then you may be able to introduce delays between requests to
-        lower your app's request rate. Any extra waiting or intentional
-        delays introduced by your app to deal with rate limits must be
-        communicated to the user (e.g., you can adjust a label to say
-        something like "intentionally waiting to deal with rate limits"
-        whenever your program does either of these two things).
+       1. **It must be clear to users wich API they are querying and
+          viewing the response for at any given point in time.** Your
+          app may show both APIs at the same time (so long as your app
+          does not exceed any size requirements mentioned elsewhere)
+          or let the user switch between APIs (without having to
+          restart your app).
+
+       2. **The users of your app must not be required to provide
+          their own credentials to any service in order for it to
+          function (e.g., a username, password, or API key).** Your
+          app may incorporate *your* API keys, if needed, as described
+          in the appendix of the project description.
+
+       3. **You are responsible for dealing with rate limits imposed
+          by the APIs that you use.** Many APIs have a limit on the
+          number of API calls that can be made by an app (e.g., number
+          of calls per second, per day, or in total). Please take
+          precautions when using such APIs in your project so that we
+          can grade it. There is no way for us to specify the exact
+          number of times that we will run your app when grading
+          it. If your app exceeds any rate limits while grading, then
+          we will be unable to evaluate it.
+
+       **SUGGESTION:** To reduce the risk that you will exceed a rate
+       limit, you are encouraged to write code to let your app keep
+       track of the number of API requests that it has made over
+       different periods of time and use that information to
+       programmatically delay subsequent calls. For example, if your
+       app includes a button that triggers multiple API requests, then
+       should consider disabling the button while those requests are
+       being made AND for some sensible extra amount of time after the
+       completion of those requests to reduce the rate of request made
+       by your app -- the exact amount of extra time will depend on
+       the number of API requests your app makes as well as the rate
+       limits imposed by the APIs. If your app needs to make more
+       calls than it is allowed to make due to an API rate limit, then
+       you may be able to introduce delays between requests to lower
+       your app's request rate. Any extra waiting or intentional
+       delays introduced by your app to deal with rate limits must be
+       communicated to the user (e.g., you can adjust a label to say
+       something like "intentionally waiting to deal with rate limits"
+       whenever your program does either of these two things).
 
         **FURTHER READING:** We have included some additional information
         [here](APPENDIX_API.md#checking-for-rate-limits) regarding how to
@@ -229,21 +250,18 @@ This assignment is worth 100 points.
 
 ### Primary Functions (90 points)
 
-Your app must integrate two or more external RESTful JSON APIs based on
-user input and combine the responses in some meaningful/interesting
-way. Combining responses means that the response from one API should be
-used (at least in part) to query the second API. Your application must
-automate the process of connecting two different APIs for a single
-purpose. Failure to meet this requirement will result in a grade of 0
-for this category. If you have questions about whether or not your idea
-is sufficient, please discuss it with an instructor.
+Your app must showcase two or more external RESTful JSON APIs as
+described earlier in the project description. Failure to meet this
+requirement will result in a grade of 0 for this category. If you have
+questions about whether or not your idea is sufficient, please discuss
+it with an instructor.
 
 ### Multiple Uses per Execution (10 points)
 
-After the application is started, your application should allow the user
-to query the API(s) an arbitrary number of times without requiring them
-to exit and rerun the application. By arbitrary, we mean that there is
-no limit to how many times the user may do this.
+After the application is started, your application should allow the
+user to query each API an arbitrary number of times without requiring
+them to exit and rerun the application. By arbitrary, we mean that
+there is no limit to how many times the user may do this.
 
 ## Non-Functional Requirements
 
@@ -377,14 +395,16 @@ other types in the `java.net.http` package is allowed if they are used to suppor
 
 ### Final Project == Final Exam
 
-Per university policy, each student must be provided the opportunity to
-stand for a final examination as part of the completion of a full
+Per university policy, each student must be provided the opportunity
+to stand for a final examination as part of the completion of a full
 instructional term, and instructors have the authority to design and
 administer the final examination for a course in whatever manner is
 appropriate. In CSCI 1302 this semester, **the final project described
 by this document will be treated as the final examination** since the
 grade and feedback that a student receives for this assignment is a
-summative evaluation of the entire term's work.
+summative evaluation of the entire term's work. This is not the same
+as the optional cummulative final exam that is offered during the
+standard final exam date and time.
 
 ### Final Submission Deadline
 
@@ -438,9 +458,9 @@ All other dependencies are handled via Maven.
 ## How to Download the Project
 
 **Downloading the starter code for this project requires more steps
-compared to earlier projects.** These instructions assume that you have
-completed the steps in
-["Setting up SSH Keys"](https://github.com/cs1302uga/cs1302-tutorials/blob/master/github-setup.md)
+compared to earlier projects.** These instructions assume that you
+have completed the steps in ["Setting up SSH
+Keys"](https://github.com/cs1302uga/cs1302-tutorials/blob/master/github-setup.md)
 to set up your public and private key pair on Odin and GitHub.
 
 1.  If you have not done so already, you should create a free
@@ -644,8 +664,7 @@ files are on `odin.cs.uga.edu`.
 
 ## FAQ
 
-Below are some frequently asked questions related to this project. You
-may also find the cs1302-gallery FAQ\_ a useful resource as well.
+Below are some frequently asked questions related to this project.
 
 1.  **May I use an API not mentioned in the project description?**
 
@@ -668,16 +687,17 @@ may also find the cs1302-gallery FAQ\_ a useful resource as well.
 
 3. **Examples of Projects that would not be allowed:**
 
-   1. Get a random image of a dog from the Dog API and a random image of a cat from another API and then
-      show them next to each other.
-        - This example does not combine the APIs. The response (or part of the response)
-          from the first API is not used to query the second.
-        - User input is not used to adjust the query to the first API.
-   2. Get your latitude/longitude or other location information from API #1 and send the location information
-      to API #2 to get current weather, local events, etc.
-        - User input is not used to adjust the query to the first API - even if the user is required to click
-          a button to start the process.
-   3. An application that uses an API that responds with a image data(instead of JSON).
+   1. Get and display random image of a dog from the Dog API without
+      the user modifying the request in any way.
+
+   2. Ask the user to enter their latitude and longitude.
+
+   3. Showcases an API that responds with image data (instead of
+      JSON).
+
+   4. Your custom component is essentially showing terminal/console
+      output without presenting it in a nice, "visual" way, as
+      described earlier in this project description.
 
 [![license\_image](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
