@@ -23,9 +23,8 @@ credit.
 | 2  | + 5   | SUN 2026-05-03 (MAY 03) @ 03:30 PM EST |
 | 3  | + 0   | MON 2026-05-04 (MAY 04) @ 03:30 PM EST |
 
-
 For both logistical and policy-related reasons, the usual late-work
-policy will not apply for this project, and no late submissions will be
+policy will not apply for this project, and no late submissions will be
 accepted after the last deadline option mentioned above. **To be clear,
 final project submissions received after the last deadline option will
 NOT be graded.**
@@ -288,8 +287,8 @@ The windows of your application should not exceed a pixel dimension of
 delays resulting from X forwarding, your application should not
 hang/freeze or crash during execution.
 
-**NOTE:** If a grader encounters lag, then they will try to run your application
-locally after first checking that it compiles on Odin.
+**NOTE:** If a grader encounters lag, then they will try to run your
+application locally after first checking that it compiles on Odin.
 
 ### Private GitHub-hosted Git Repository (20 points)
 
@@ -303,20 +302,20 @@ may lead to an academic honesty violation.
 
 ### DEADLINE.md (10 points)
 
-The included `DEADLINE.md` file must adequately describe your application,
-explain the APIs used (the URLs used to request data, and the rate limits (if any)),
-and provide thoughtful comments on what you learned. More
-details can be found in the provided
-[`DEADLINE.md` template](https://github.com/cs1302uga/cs1302-api-app/blob/main/meta/DEADLINE.md).
+The included `DEADLINE.md` file must adequately describe your
+application, explain the APIs used (the URLs used to request data, and
+the rate limits (if any)), and provide thoughtful comments on what you
+learned. More details can be found in the provided [`DEADLINE.md`
+template](https://github.com/cs1302uga/cs1302-api-app/blob/main/meta/DEADLINE.md).
 
 ### Local Assets / Resources (10 points)
 
 All assets (e.g., images), except for assets discovered using an
 external API, need to be pre-downloaded and placed either in the
-`resources` (not `src/main/resources`) or a directory under `resources`.
-**This will help make your app faster.** Here are some examples that
-illustrate the relationship between the path for a resource and the
-`file:` URL that you need to use in your code:
+`resources` (not `src/main/resources`) or a directory under
+`resources`.  **This will help make your app faster.** Here are some
+examples that illustrate the relationship between the path for a
+resource and the `file:` URL that you need to use in your code:
 
 | Resource                | URL                            |
 |-------------------------|--------------------------------|
