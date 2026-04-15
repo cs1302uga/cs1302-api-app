@@ -278,7 +278,8 @@ with no errors or warnings*.
 
 ### API Access (100 points)
 
-Your app must combine two APIs in a meaningful way as described above.
+Your app must directly access each API using HTTP requests as
+described above.
 
 ### User-Friendly Experience (10 points)
 
