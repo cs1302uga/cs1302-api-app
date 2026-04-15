@@ -401,9 +401,9 @@ administer the final examination for a course in whatever manner is
 appropriate. In CSCI 1302 this semester, **the final project described
 by this document will be treated as the final examination** since the
 grade and feedback that a student receives for this assignment is a
-summative evaluation of the entire term's work. This is not the same
+summative evaluation of the entire term's work. **This is not the same
 as the optional cummulative final exam that is offered during the
-standard final exam date and time.
+standard final exam date and time.**
 
 ### Final Submission Deadline
 
