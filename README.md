@@ -46,9 +46,12 @@ requirement.
 ## Project Description
 
 Your goal is to implement, from scratch, an application that automates
-the process of querying two different RESTful JSON APIs using JavaFX,
-custom components, HTTP requests, and JSON parsing. In other words,
-your app will showcase each RESTful JSON API by providing a way to let
+the process of querying two different RESTful JSON APIs using 
+[JavaFX](https://cs1302book.com/java/javafx/javafx-index.html),
+[custom components](https://cs1302book.com/java/components/components-index.html), 
+[HTTP requests](https://cs1302book.com/java/http/http-index.html), 
+and [JSON parsing](https://cs1302book.com/java/json/json-index.html). 
+In other words, your app will showcase each RESTful JSON API by providing a way to let
 users interact with them without having write the code to send the API
 requests (i.e., the HTTP requests to each API) themselves. Your app
 needs to do more than just download and display responses from the
