@@ -1,6 +1,6 @@
 # CSCI 1302 - Api App v2026.sp
 
-![Approved for Spring 2026](https://img.shields.io/badge/Approved%20for-TBA%20TBA-green)
+![Approved for Spring 2026](https://img.shields.io/badge/Approved%20for-Spring%202026-green)
 
 ![Image from page 400 of "The Palm of Alpha Tau Api" (1880)](https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-banner.png)
 
