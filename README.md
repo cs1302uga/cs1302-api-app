@@ -5,7 +5,7 @@
 ![Image from page 400 of "The Palm of Alpha Tau Api" (1880)](https://github.com/cs1302uga/cs1302-api-app/raw/main/resources/readme-banner.png)
 
 This document contains the description for the **cs1302-api-app**
-project assigned to the students in the Fall 2025 CSCI 1302 classes at
+project assigned to the students in the Spring 2026 CSCI 1302 classes at
 the University of Georgia.
 
 **Please read the entirety of this file before beginning your project.**
